@@ -1,0 +1,4 @@
+.DS_Store
+/__sapper__
+/**/node_modules
+yarn-error.log

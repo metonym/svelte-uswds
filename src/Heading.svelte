@@ -1,0 +1,36 @@
+<script>
+  export let tag = "h1";
+  export let id = undefined; // string
+
+  let ref = undefined;
+
+  $: if (id === undefined && ref) {
+    id = ref.innerText.replace(/\s+/g, "-").toLowerCase();
+  }
+</script>
+
+{#if tag === 'h1'}
+  <h1 {...$$restProps} {id} bind:this={ref}>
+    <slot />
+  </h1>
+{:else if tag === 'h2'}
+  <h2 {...$$restProps} {id} bind:this={ref}>
+    <slot />
+  </h2>
+{:else if tag === 'h3'}
+  <h3 {...$$restProps} {id} bind:this={ref}>
+    <slot />
+  </h3>
+{:else if tag === 'h4'}
+  <h4 {...$$restProps} {id} bind:this={ref}>
+    <slot />
+  </h4>
+{:else if tag === 'h5'}
+  <h5 {...$$restProps} {id} bind:this={ref}>
+    <slot />
+  </h5>
+{:else if tag === 'h6'}
+  <h6 {...$$restProps} {id} bind:this={ref}>
+    <slot />
+  </h6>
+{/if}

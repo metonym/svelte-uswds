@@ -1,0 +1,46 @@
+{
+  "name": "svelte-uswds",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Svelte component library that implements the U.S. Web Design System",
+  "author": "Eric Liu (https://github.com/metonym)",
+  "svelte": "src/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "rollup -c && prettier --write 'src/**/*.{js,svelte}'"
+  },
+  "peerDependencies": {
+    "svelte": "^3.20.x"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1",
+    "prettier-plugin-svelte": "0.7.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.2.1",
+    "svelte": "^3.20.x"
+  },
+  "prettier": {
+    "printWidth": 100
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metonym/svelte-uswds.git"
+  },
+  "homepage": "https://github.com/metonym/svelte-uswds",
+  "bugs": "https://github.com/metonym/svelte-uswds/issues",
+  "keywords": [
+    "svelte",
+    "U.S. Web Design System",
+    "uswds",
+    "design system",
+    "component library"
+  ],
+  "files": [
+    "lib",
+    "src"
+  ]
+}

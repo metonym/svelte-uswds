@@ -1,0 +1,7 @@
+<script>
+  export let href = "#main-content";
+</script>
+
+<a {...$$restProps} class="usa-skipnav" {href} on:click>
+  <slot>Skip to main content</slot>
+</a>

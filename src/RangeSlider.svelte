@@ -1,0 +1,59 @@
+<script>
+  export let id = "uswds-" + Math.random().toString(36);
+  export let label = "Range slider";
+  export let min = 0;
+  export let max = 100;
+  export let step = 10;
+  export let value = 20;
+  export let success = false;
+  export let error = false;
+  export let errorText = "Helpful error message";
+  export let readonly = false;
+  export let required = false;
+  export let disabled = false;
+</script>
+
+{#if error}
+  <div class="usa-form-group usa-form-group--error">
+    <label class="usa-label usa-label--error" for={id}>
+      {label}
+      {#if !required}
+        <span class="usa-hint">(optional)</span>
+      {/if}
+    </label>
+    <span class="usa-error-message" id="error-${id}" role="alert">{errorText}</span>
+    <input
+      class="usa-range usa-input--error"
+      type="range"
+      {id}
+      {disabled}
+      {readonly}
+      {required}
+      aria-required={required}
+      {min}
+      {max}
+      {step}
+      {value}
+      on:focus
+      on:blur
+      on:change />
+  </div>
+{:else}
+  <label class="usa-label" for={id}>{label}</label>
+  <input
+    class="usa-range"
+    class:usa-input--success={success}
+    type="range"
+    {id}
+    {disabled}
+    {readonly}
+    {required}
+    aria-required={required}
+    {min}
+    {max}
+    {step}
+    {value}
+    on:focus
+    on:blur
+    on:change />
+{/if}
