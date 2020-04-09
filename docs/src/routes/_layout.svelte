@@ -25,14 +25,6 @@
   setContext("Navigation", { path, slug });
 
   afterUpdate(() => {
-    if (mobile) {
-      if (visible) {
-        document.body.classList.add("hidden");
-      } else {
-        document.body.classList.remove("hidden");
-      }
-    }
-
     if (mobile && returnToTopHref !== prevPath) {
       visible = false;
     }
@@ -60,10 +52,6 @@
 <style>
   :global(body) {
     overflow-y: scroll;
-  }
-
-  :global(body.hidden) {
-    overflow-y: hidden;
   }
 
   header {
