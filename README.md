@@ -7,50 +7,60 @@
 
 ## [Documentation](https://svelte-uswds.onrender.com/)
 
-## Quick start
+## Getting started
 
-### Install
-
-```bash
+```sh
 yarn add -D svelte-uswds
 # OR
 npm i -D svelte-uswds
 ```
 
-### Adding styles
+## Adding styles
 
 In your root svelte file, link a stylesheet from a CDN using the `svelte:head` API.
 
-```html
+```svelte
 <!-- App.svelte -->
 <svelte:head>
-  <link rel="stylesheet" href="https://unpkg.com/uswds@2.6.0/dist/css/uswds.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/uswds@2.8.1/dist/css/uswds.min.css" />
 </svelte:head>
+
 ```
 
-### Importing components
+## Importing components
 
-```svelte
+### Script
+
+```html
 <!-- App.svelte -->
 <script>
   import { Accordion, AccordionItem } from "svelte-uswds";
 </script>
+```
 
+### Mark-up
+
+```svelte
+<!-- App.svelte -->
 <Accordion>
   <AccordionItem title="First Amendment" expanded>
     <p>
-      Congress shall make no law respecting an establishment of religion, or prohibiting the free
-      exercise thereof; or abridging the freedom of speech, or of the press; or the right of the
-      people peaceably to assemble, and to petition the Government for a redress of grievances.
+      Congress shall make no law respecting an establishment of religion, or
+      prohibiting the free exercise thereof; or abridging the freedom of speech,
+      or of the press; or the right of the people peaceably to assemble, and to
+      petition the Government for a redress of grievances.
     </p>
   </AccordionItem>
   <AccordionItem title="Second Amendment">
     <p>
-      A well regulated Militia, being necessary to the security of a free State, the right of the
-      people to keep and bear Arms, shall not be infringed.
+      A well regulated Militia, being necessary to the security of a free State,
+      the right of the people to keep and bear Arms, shall not be infringed.
     </p>
   </AccordionItem>
 </Accordion>
+
 ```
 
 ## [Changelog](CHANGELOG.md)
