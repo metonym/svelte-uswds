@@ -10,7 +10,7 @@ export default ["es", "umd"].map((format) => {
     output: {
       format,
       file: UMD ? pkg.main : pkg.module,
-      name: UMD ? "svelte-uswds" : undefined,
+      name: UMD ? "SvelteUswds" : undefined,
     },
     plugins: [svelte(), resolve()],
   };
