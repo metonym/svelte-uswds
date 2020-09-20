@@ -30,13 +30,27 @@ In your root svelte file, link a stylesheet from a CDN using the `svelte:head` A
 
 ### Importing components
 
-```html
+```svelte
 <!-- App.svelte -->
 <script>
-  import { Button } from "svelte-uswds";
+  import { Accordion, AccordionItem } from "svelte-uswds";
 </script>
 
-<button>Hello world</button>
+<Accordion>
+  <AccordionItem title="First Amendment" expanded>
+    <p>
+      Congress shall make no law respecting an establishment of religion, or prohibiting the free
+      exercise thereof; or abridging the freedom of speech, or of the press; or the right of the
+      people peaceably to assemble, and to petition the Government for a redress of grievances.
+    </p>
+  </AccordionItem>
+  <AccordionItem title="Second Amendment">
+    <p>
+      A well regulated Militia, being necessary to the security of a free State, the right of the
+      people to keep and bear Arms, shall not be infringed.
+    </p>
+  </AccordionItem>
+</Accordion>
 ```
 
 ## [Changelog](CHANGELOG.md)
