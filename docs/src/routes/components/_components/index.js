@@ -1,6 +1,7 @@
 import Accordion from "./Accordion.svelte";
 import Alert from "./Alert.svelte";
 import Banner from "./Banner.svelte";
+import Breadcrumb from "./Breadcrumb.svelte";
 import Button from "./Button.svelte";
 import Checkbox from "./Checkbox.svelte";
 import Checklist from "./Checklist.svelte";
@@ -24,6 +25,7 @@ export {
   Accordion,
   Alert,
   Banner,
+  Breadcrumb,
   Button,
   Checkbox,
   Checklist,
@@ -41,5 +43,5 @@ export {
   RangeSlider,
   SideNav,
   Table,
-  RadioButton
+  RadioButton,
 };

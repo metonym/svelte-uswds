@@ -2,6 +2,7 @@ const components = [
   "Accordion",
   "Alert",
   "Banner",
+  "Breadcrumb",
   "Button",
   "Checkbox",
   "Checklist",
@@ -26,7 +27,7 @@ const components = [
   "Table",
   "Tag",
   "TextArea",
-  "TextInput"
+  "TextInput",
 ];
 
 // Header -> SkipToMainContent, Menu, HeaderNav, HeaderLogo
@@ -41,11 +42,16 @@ const subcomponents = [
   "Form",
   "Fieldset",
   "Header",
-  "Footer"
+  "Footer",
 ];
 
-export const nav_components = components.filter(name => !subcomponents.includes(name));
+export const nav_components = components.filter(
+  (name) => !subcomponents.includes(name)
+);
 
-const posts = nav_components.map(title => ({ title, slug: title.toLowerCase() }));
+const posts = nav_components.map((title) => ({
+  title,
+  slug: title.toLowerCase(),
+}));
 
 export default posts;
