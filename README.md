@@ -3,7 +3,7 @@
 [![NPM][npm]][npm-url]
 [![Build][build]][build-badge]
 
-> Svelte component library that implements the [U.S. Web Design System](https://designsystem.digital.gov/).
+> Svelte component library that implements the [U.S. Web Design System](https://designsystem.digital.gov/) (USWDS).
 
 ## [Documentation](https://svelte-uswds.onrender.com/)
 
@@ -62,6 +62,10 @@ In your root svelte file, link a stylesheet from a CDN using the `svelte:head` A
 </Accordion>
 
 ```
+
+## TypeScript
+
+This library includes TypeScript definitions ([types/index.d.ts](types/index.d.ts)).
 
 ## [Changelog](CHANGELOG.md)
 
