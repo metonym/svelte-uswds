@@ -5,6 +5,7 @@ export { default as Banner } from "./Banner.svelte";
 export { default as Breadcrumb } from "./Breadcrumb.svelte";
 export { default as Button } from "./Button.svelte";
 export { default as ButtonGroup } from "./ButtonGroup.svelte";
+export { default as Card } from "./Card.svelte";
 export { default as Checkbox } from "./Checkbox.svelte";
 export { default as CheckboxGroup } from "./CheckboxGroup.svelte";
 export { default as Checklist } from "./Checklist.svelte";

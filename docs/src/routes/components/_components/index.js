@@ -4,6 +4,7 @@ import Banner from "./Banner.svelte";
 import Breadcrumb from "./Breadcrumb.svelte";
 import Button from "./Button.svelte";
 import ButtonGroup from "./ButtonGroup.svelte";
+import Card from "./Card.svelte";
 import Checkbox from "./Checkbox.svelte";
 import Checklist from "./Checklist.svelte";
 import DateInput from "./DateInput.svelte";
@@ -30,6 +31,7 @@ export {
   Breadcrumb,
   Button,
   ButtonGroup,
+  Card,
   Checkbox,
   Checklist,
   DateInput,

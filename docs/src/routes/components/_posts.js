@@ -5,6 +5,7 @@ const components = [
   "Breadcrumb",
   "Button",
   "ButtonGroup",
+  "Card",
   "Checkbox",
   "Checklist",
   "DateInput",
