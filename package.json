@@ -7,9 +7,10 @@
   "svelte": "./src/index.js",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
+  "types": "./types/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "prepack": "prettier --write 'src/**/*.{js,svelte}' && rollup -c"
+    "prepack": "prettier --write 'src/*.svelte' && rollup -c && node scripts/extract-types"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
@@ -37,6 +38,7 @@
   ],
   "files": [
     "lib",
-    "src"
+    "src",
+    "types"
   ]
 }
