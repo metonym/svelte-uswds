@@ -1,5 +1,12 @@
 <script>
+  /**
+   * @type {string} [href="javascript:void(0);"]
+   */
   export let href = "javascript:void(0);";
+
+  /**
+   * @type {boolean} [secondary=false]
+   */
   export let secondary = false;
 
   import { getContext } from "svelte";

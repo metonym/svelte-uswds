@@ -1,9 +1,32 @@
 <script>
+  /**
+   * @type {*} [test]
+   */
   export let test = undefined;
-  export let length = undefined; // number
-  export let minLength = undefined; // number
-  export let maxLength = undefined; // number
-  export let validator = undefined; // 'uppercase' | 'lowercase' | 'numerical' | 'alphanumeric'
+
+  /**
+   * @type {number} [length]
+   */
+  export let length = undefined;
+
+  /**
+   * @type {number} [minLength]
+   */
+  export let minLength = undefined;
+
+  /**
+   * @type {number} [maxLength]
+   */
+  export let maxLength = undefined;
+
+  /**
+   * @type {"uppercase" | "lowercase" | "numerical" | "alphanumeric"} [validator]
+   */
+  export let validator = undefined;
+
+  /**
+   * @type {boolean} [checked=false]
+   */
   export let checked = false;
 
   const validators = {

@@ -1,4 +1,7 @@
 <script>
+  /**
+   * @type {string} [href="#"]
+   */
   export let href = "#";
 
   import Grid from "./Grid.svelte";

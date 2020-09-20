@@ -1,4 +1,7 @@
 <script>
+  /**
+   * @type {string} [href="#main-content"]
+   */
   export let href = "#main-content";
 </script>
 

@@ -1,14 +1,57 @@
 <script>
+  /**
+   * @type {{ value: string; text?: string; }[]} [options=[]]
+   */
+  export let options = [];
+
+  /**
+   * @type {string} [selected]
+   */
+  export let selected = undefined;
+
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [label="Dropdown label"]
+   */
   export let label = "Dropdown label";
+
+  /**
+   * @type {string} [name=""]
+   */
   export let name = "";
-  export let options = []; // { value: string; text?: string; }[]
-  export let selected = undefined; // string
+
+  /**
+   * @type {boolean} [success=false]
+   */
   export let success = false;
+
+  /**
+   * @type {boolean} [error=false]
+   */
   export let error = false;
+
+  /**
+   * @type {string} [errorText="Helpful error message"]
+   */
   export let errorText = "Helpful error message";
+
+  /**
+   * @type {boolean} [readonly=false]
+   */
   export let readonly = false;
+
+  /**
+   * @type {boolean} [required=false]
+   */
   export let required = false;
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
 </script>
 

@@ -1,9 +1,32 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {boolean} [big=false]
+   */
   export let big = false;
+
+  /**
+   * @type {boolean} [small=false]
+   */
   export let small = false;
+
+  /**
+   * @type {string} [label="Search"]
+   */
   export let label = "Search";
+
+  /**
+   * @type {string} [name="search"]
+   */
   export let name = "search";
+
+  /**
+   * @type {string} [value=""]
+   */
   export let value = "";
 
   import { createEventDispatcher, afterUpdate } from "svelte";

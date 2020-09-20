@@ -1,6 +1,17 @@
 <script>
+  /**
+   * @type {boolean} [big=false]
+   */
   export let big = false;
+
+  /**
+   * @type {boolean} [medium=true]
+   */
   export let medium = true;
+
+  /**
+   * @type {boolean} [slim=false]
+   */
   export let slim = false;
 
   import { setContext } from "svelte";

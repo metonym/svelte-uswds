@@ -1,5 +1,13 @@
 <script>
-  export let caption = undefined; // string | slot:caption
+  /**
+   * Slottable as "caption"
+   * @type {string} [caption]
+   */
+  export let caption = undefined;
+
+  /**
+   * @type {boolean} [borderless=false]
+   */
   export let borderless = false;
 </script>
 

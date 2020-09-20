@@ -1,5 +1,12 @@
 <script>
+  /**
+   * @type {boolean} [multiselectable=false]
+   */
   export let multiselectable = false;
+
+  /**
+   * @type {boolean} [bordered=false]
+   */
   export let bordered = false;
 
   import { setContext } from "svelte";

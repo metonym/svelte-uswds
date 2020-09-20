@@ -1,20 +1,87 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [name=""]
+   */
   export let name = "";
-  export let type = "text"; // 'text' | 'number' | 'password'
+
+  /**
+   * @type {"text" | "number" | "password"} [type="text"]
+   */
+  export let type = "text";
+
+  /**
+   * @type {string} [value=""]
+   */
   export let value = "";
+
+  /**
+   * @type {string} [label="Text input"]
+   */
   export let label = "Text input";
-  export let size = undefined; // 'small' | 'medium'
+
+  /**
+   * @type {"small" | "medium"} [size]
+   */
+  export let size = undefined;
+
+  /**
+   * @type {boolean} [success=false]
+   */
   export let success = false;
+
+  /**
+   * @type {boolean} [error=false]
+   */
   export let error = false;
+
+  /**
+   * @type {string} [errorText="Helpful error message"]
+   */
   export let errorText = "Helpful error message";
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let readonly = false;
+
+  /**
+   * @type {boolean} [required=false]
+   */
   export let required = false;
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
-  export let pattern = undefined; // string
+
+  /**
+   * @type {string | RegExp} [pattern]
+   */
+  export let pattern = undefined;
+
+  /**
+   * @type {boolean} [autocapitalize=false]
+   */
   export let autocapitalize = false;
+
+  /**
+   * @type {boolean} [autocorrect=false]
+   */
   export let autocorrect = false;
+
+  /**
+   * @type {boolean} [spellcheck=false]
+   */
   export let spellcheck = false;
+
+  /**
+   * @type {boolean} [autocomplete=false]
+   */
   export let autocomplete = false;
 
   $: if (typeof autocomplete === "boolean") {

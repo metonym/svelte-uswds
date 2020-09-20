@@ -1,7 +1,18 @@
 <script>
+  /**
+   * @type {string} [legend="Radio button group"]
+   */
   export let legend = "Radio button group";
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
-  export let value = undefined; // string
+
+  /**
+   * @type {string} [value]
+   */
+  export let value = undefined;
 
   import {
     setContext,

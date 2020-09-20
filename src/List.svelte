@@ -1,5 +1,12 @@
 <script>
+  /**
+   * @type {boolean} [ordered=false]
+   */
   export let ordered = false;
+
+  /**
+   * @type {boolean} [unstyled=false]
+   */
   export let unstyled = false;
 </script>
 

@@ -1,4 +1,7 @@
 <script>
+  /**
+   * @type {boolean} [big=false]
+   */
   export let big = false;
 </script>
 

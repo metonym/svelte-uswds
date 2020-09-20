@@ -1,9 +1,33 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [name=""]
+   */
   export let name = "";
+
+  /**
+   * @type {string} [value=""]
+   */
   export let value = "";
-  export let label = "Checkbox label"; // string | slot
+
+  /**
+   * Slottable (default slot)
+   * @type {string} [label="Checkbox label"]
+   */
+  export let label = "Checkbox label";
+
+  /**
+   * @type {boolean} [checked=false]
+   */
   export let checked = false;
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
 
   import { getContext, onDestroy } from "svelte";

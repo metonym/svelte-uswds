@@ -1,5 +1,12 @@
 <script>
+  /**
+   * @type {string} [href="javascript:void(0);"]
+   */
   export let href = "javascript:void(0);";
+
+  /**
+   * @type {boolean} [current=false]
+   */
   export let current = false;
 
   import { getContext, onDestroy } from "svelte";

@@ -1,10 +1,37 @@
 <script>
+  /**
+   * @type {boolean} [row=false]
+   */
   export let row = false;
-  export let gutters = false; // boolean | 'lg' | '2px' | '05' | 1 | 2 | 3 | 4 | 5 | 6
-  export let col = undefined; // boolean | number
-  export let variant = undefined; // 'mobile-lg' | 'tablet' | 'desktop'
+
+  /**
+   * @type {boolean | "lg" | "2px" | "05" | 1 | 2 | 3 | 4 | 5 | 6} [gutters=false]
+   */
+  export let gutters = false;
+
+  /**
+   * @type {boolean | number} [col]
+   */
+  export let col = undefined;
+
+  /**
+   * @type {"mobile-lg" | "tablet" | "desktop"} [variant]
+   */
+  export let variant = undefined;
+
+  /**
+   * @type {boolean} [auto=false]
+   */
   export let auto = false;
+
+  /**
+   * @type {boolean} [fill=false]
+   */
   export let fill = false;
+
+  /**
+   * @type {number} [offset=0]
+   */
   export let offset = 0;
 
   $: gap = row && gutters != false;

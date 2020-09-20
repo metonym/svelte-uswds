@@ -1,7 +1,18 @@
 <script>
+  /**
+   * @type {string[]} [values]
+   */
+  export let values = undefined;
+
+  /**
+   * @type {string} [legend="Checkbox group"]
+   */
   export let legend = "Checkbox group";
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
-  export let values = undefined; // string[]
 
   import {
     onMount,

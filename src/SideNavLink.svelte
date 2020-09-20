@@ -1,6 +1,17 @@
 <script>
+  /**
+   * @type {string} [href=""]
+   */
   export let href = "";
+
+  /**
+   * @type {string} [text=""]
+   */
   export let text = "";
+
+  /**
+   * @type {boolean} [current=false]
+   */
   export let current = false;
 </script>
 

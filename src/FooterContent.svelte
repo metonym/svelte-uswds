@@ -1,4 +1,7 @@
 <script>
+  /**
+   * @type {string} [topic="Topic"]
+   */
   export let topic = "Topic";
 
   import List from "./List.svelte";

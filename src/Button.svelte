@@ -1,7 +1,22 @@
 <script>
+  /**
+   * @type {"default" | "secondary" | "accent-cool" | "base" | "outline" | "outline-inverse"} [kind="default"]
+   */
+  export let kind = "default";
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
-  export let kind = "default"; // 'default' | 'secondary' | 'accent-cool' | 'base' | 'outline' | 'outline-inverse'
+
+  /**
+   * @type {boolean} [big=false]
+   */
   export let big = false;
+
+  /**
+   * @type {boolean} [unstyled=false]
+   */
   export let unstyled = false;
 </script>
 

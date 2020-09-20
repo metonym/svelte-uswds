@@ -1,6 +1,17 @@
 <script>
+  /**
+   * @type {boolean} [basic=true]
+   */
   export let basic = true;
+
+  /**
+   * @type {boolean} [extended=false]
+   */
   export let extended = false;
+
+  /**
+   * @type {boolean} [skipNav=false]
+   */
   export let skipNav = false; // TODO: rename
 
   import { setContext, afterUpdate } from "svelte";

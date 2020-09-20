@@ -1,5 +1,12 @@
 <script>
+  /**
+   * @type {string} [title="Home"]
+   */
   export let title = "Home";
+
+  /**
+   * @type {string} [href="/"]
+   */
   export let href = "/";
 </script>
 

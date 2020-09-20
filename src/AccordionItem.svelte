@@ -1,6 +1,17 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [title="Title"]
+   */
   export let title = "Title";
+
+  /**
+   * @type {boolean} [expanded=false]
+   */
   export let expanded = false;
 
   import { getContext, onDestroy } from "svelte";

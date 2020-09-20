@@ -1,6 +1,13 @@
 <script>
+  /**
+   * @type {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} [tag="h1"]
+   */
   export let tag = "h1";
-  export let id = undefined; // string
+
+  /**
+   * @type {string} [id]
+   */
+  export let id = undefined;
 
   let ref = undefined;
 

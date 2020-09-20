@@ -1,8 +1,23 @@
 <script>
+  /**
+   * @type {string} [href="javascript:void(0);"]
+   */
   export let href = "javascript:void(0);";
-  export let external = false;
-  export let target = undefined; // string
-  export let rel = undefined; // string
+
+  /**
+   * @type {boolean} [external=false]
+   */
+  export let external = false; // TODO: deprecate (use $$restProps)
+
+  /**
+   * @type {string} [target]
+   */
+  export let target = undefined; // TODO: deprecate
+
+  /**
+   * @type {string} [rel]
+   */
+  export let rel = undefined; // TODO: deprecate
 
   $: if (target === "_blank" && rel === undefined) {
     rel = "noopener noreferrer";

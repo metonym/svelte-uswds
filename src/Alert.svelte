@@ -1,8 +1,27 @@
 <script>
-  export let kind = undefined; // 'success' | 'warning' | 'error' | 'info' | 'validation'
-  export let title = undefined; // string
-  export let role = undefined; // 'alert' | 'alertdialog'
+  /**
+   * @type {"success" | "warning" | "error" | "info" | "validation"} [kind]
+   */
+  export let kind = undefined;
+
+  /**
+   * @type {string} [title]
+   */
+  export let title = undefined;
+
+  /**
+   * @type {"alert" | "alertdialog"} [role]
+   */
+  export let role = undefined;
+
+  /**
+   * @type {boolean} [slim=false]
+   */
   export let slim = false;
+
+  /**
+   * @type {boolean} [hideIcon=false]
+   */
   export let hideIcon = false;
 </script>
 

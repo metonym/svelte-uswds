@@ -1,9 +1,32 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [buttonText="Open menu"]
+   */
   export let buttonText = "Open menu";
+
+  /**
+   * @type {boolean} [current=false]
+   */
   export let current = false;
+
+  /**
+   * @type {boolean} [expanded=false]
+   */
   export let expanded = false;
+
+  /**
+   * @type {boolean} [mega=false]
+   */
   export let mega = false;
+
+  /**
+   * @type {boolean} [secondary=false]
+   */
   export let secondary = false;
 
   import { setContext } from "svelte";

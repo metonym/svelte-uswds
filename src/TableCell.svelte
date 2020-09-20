@@ -1,4 +1,7 @@
 <script>
+  /**
+   * @type {boolean} [tabular=false]
+   */
   export let tabular = false;
 
   import { getContext, onDestroy } from "svelte";

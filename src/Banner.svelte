@@ -1,7 +1,22 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {boolean} [expanded=false]
+   */
   export let expanded = false;
+
+  /**
+   * @type {string} [headerText="Header text"]
+   */
   export let headerText = "Header text";
+
+  /**
+   * @type {string} [buttonText="Button text"]
+   */
   export let buttonText = "Button text";
 </script>
 

@@ -1,6 +1,17 @@
 <script>
+  /**
+   * @type {string} [label="Password"]
+   */
   export let label = "Password";
+
+  /**
+   * @type {boolean} [showPassword=false]
+   */
   export let showPassword = false;
+
+  /**
+   * @type {boolean} [autocomplete=false]
+   */
   export let autocomplete = true;
 
   import TextInput from "./TextInput.svelte";

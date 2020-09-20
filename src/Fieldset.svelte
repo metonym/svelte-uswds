@@ -1,6 +1,14 @@
 <script>
   export let legend = "Legend";
+
+  /**
+   * @type {boolean} [hideLegend=false]
+   */
   export let hideLegend = false;
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
 </script>
 

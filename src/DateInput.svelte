@@ -1,12 +1,47 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [legend="Date input"]
+   */
   export let legend = "Date input";
+
+  /**
+   * @type {string} [hint="Hint text"]
+   */
   export let hint = "Hint text";
+
+  /**
+   * @type {boolean} [today=false]
+   */
   export let today = false;
-  export let month = undefined; // number
-  export let day = undefined; // number
-  export let year = undefined; // number
+
+  /**
+   * @type {number} [month]
+   */
+  export let month = undefined;
+
+  /**
+   * @type {number} [day]
+   */
+  export let day = undefined;
+
+  /**
+   * @type {number} [year]
+   */
+  export let year = undefined;
+
+  /**
+   * @type {number} [maxYear=2020]
+   */
   export let maxYear = 2020;
+
+  /**
+   * @type {number} [minYear]
+   */
   export let minYear = maxYear - 10;
 
   $: if (today) {

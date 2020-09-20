@@ -1,13 +1,52 @@
 <script>
+  /**
+   * @type {string} [id=""]
+   */
   export let id = "uswds-" + Math.random().toString(36);
+
+  /**
+   * @type {string} [name=""]
+   */
   export let name = "";
+
+  /**
+   * @type {string} [value=""]
+   */
   export let value = "";
+
+  /**
+   * @type {string} [label="Text area"]
+   */
   export let label = "Text area";
+
+  /**
+   * @type {boolean} [success=false]
+   */
   export let success = false;
+
+  /**
+   * @type {boolean} [error=false]
+   */
   export let error = false;
+
+  /**
+   * @type {boolean} [errorText="Helpful error message"]
+   */
   export let errorText = "Helpful error message";
+
+  /**
+   * @type {boolean} [readonly=false]
+   */
   export let readonly = false;
+
+  /**
+   * @type {boolean} [required=false]
+   */
   export let required = false;
+
+  /**
+   * @type {boolean} [disabled=false]
+   */
   export let disabled = false;
 </script>
 
