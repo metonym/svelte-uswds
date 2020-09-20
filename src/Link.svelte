@@ -1,35 +1,15 @@
 <script>
   /**
-   * @type {string} [href="javascript:void(0);"]
-   */
-  export let href = "javascript:void(0);";
-
-  /**
    * @type {boolean} [external=false]
    */
   export let external = false; // TODO: deprecate (use $$restProps)
-
-  /**
-   * @type {string} [target]
-   */
-  export let target = undefined; // TODO: deprecate
-
-  /**
-   * @type {string} [rel]
-   */
-  export let rel = undefined; // TODO: deprecate
-
-  $: if (target === "_blank" && rel === undefined) {
-    rel = "noopener noreferrer";
-  }
 </script>
 
+<!-- svelte-ignore a11y-missing-attribute -->
 <a
-  {...$$restProps}
+  rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
   class:usa-link="{true}"
   class:usa-link--external="{external}"
-  href="{href}"
-  target="{target}"
-  rel="{rel}">
+  {...$$restProps}>
   <slot />
 </a>
