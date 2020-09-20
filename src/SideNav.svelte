@@ -1,3 +1,3 @@
-<nav {...$$restProps} aria-label={$$props['aria-label']}>
+<nav {...$$restProps} aria-label="{$$props['aria-label']}">
   <slot />
 </nav>

@@ -29,7 +29,7 @@
       ctx.toggle({ id });
     }
 
-    unsubscribe = ctx.items.subscribe(value => {
+    unsubscribe = ctx.items.subscribe((value) => {
       if (value[id] !== undefined) {
         checked = value[id].checked;
       }
@@ -41,16 +41,16 @@
   <input
     class="usa-radio__input"
     type="radio"
-    {id}
-    {checked}
-    {name}
-    {disabled}
-    {value}
+    id="{id}"
+    checked="{checked}"
+    name="{name}"
+    disabled="{disabled}"
+    value="{value}"
     on:focus
     on:blur
     on:change
-    on:change={({ target }) => {
+    on:change="{({ target }) => {
       checked = target.checked;
-    }} />
-  <label class="usa-radio__label" for={id}>{label}</label>
+    }}" />
+  <label class="usa-radio__label" for="{id}">{label}</label>
 </div>

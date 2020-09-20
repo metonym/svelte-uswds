@@ -10,7 +10,7 @@
     uppercase: new RegExp(/[A-Z]/g),
     lowercase: new RegExp(/[a-z]/g),
     numerical: new RegExp(/[0-9]/g),
-    alphanumeric: new RegExp(/[a-zA-Z0-9]/g)
+    alphanumeric: new RegExp(/[a-zA-Z0-9]/g),
   };
 
   $: if (test !== undefined) {
@@ -51,6 +51,9 @@
   }
 </script>
 
-<li {...$$restProps} class:usa-checklist__item={true} class:usa-checklist__item--checked={checked}>
+<li
+  {...$$restProps}
+  class:usa-checklist__item="{true}"
+  class:usa-checklist__item--checked="{checked}">
   <slot />
 </li>

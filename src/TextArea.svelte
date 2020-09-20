@@ -13,52 +13,51 @@
 
 {#if error}
   <div class="usa-form-group usa-form-group--error">
-    <label class="usa-label usa-label--error" for={id}>
+    <label class="usa-label usa-label--error" for="{id}">
       {label}
-      {#if !required}
-        <span class="usa-hint">(optional)</span>
-      {/if}
+      {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span class="usa-error-message" id="error-{id}" role="alert">{errorText}</span>
+    <span
+      class="usa-error-message"
+      id="error-{id}"
+      role="alert">{errorText}</span>
     <textarea
       class="usa-textarea usa-input--error"
       type="text"
-      {id}
-      {name}
-      {disabled}
-      {value}
-      {readonly}
-      {required}
-      aria-required={required}
+      id="{id}"
+      name="{name}"
+      disabled="{disabled}"
+      value="{value}"
+      readonly="{readonly}"
+      required="{required}"
+      aria-required="{required}"
       on:focus
       on:blur
       on:input
-      on:input={({ target }) => {
+      on:input="{({ target }) => {
         value = target.value;
-      }} />
+      }}"></textarea>
   </div>
 {:else}
-  <label class="usa-label" for={id}>
+  <label class="usa-label" for="{id}">
     {label}
-    {#if !required}
-      <span class="usa-hint">(optional)</span>
-    {/if}
+    {#if !required}<span class="usa-hint">(optional)</span>{/if}
   </label>
   <textarea
     class="usa-textarea"
-    class:usa-input--success={success}
+    class:usa-input--success="{success}"
     type="text"
-    {id}
-    {name}
-    {disabled}
-    {value}
-    {readonly}
-    {required}
-    aria-required={required}
+    id="{id}"
+    name="{name}"
+    disabled="{disabled}"
+    value="{value}"
+    readonly="{readonly}"
+    required="{required}"
+    aria-required="{required}"
     on:focus
     on:blur
     on:input
-    on:input={({ target }) => {
+    on:input="{({ target }) => {
       value = target.value;
-    }} />
+    }}"></textarea>
 {/if}

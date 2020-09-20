@@ -2,6 +2,6 @@
   let ref = undefined;
 </script>
 
-<div {...$$restProps} bind:this={ref} class:usa-prose={true}>
+<div {...$$restProps} bind:this="{ref}" class:usa-prose="{true}">
   <slot />
 </div>

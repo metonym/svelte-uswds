@@ -89,5 +89,5 @@ export {
   TableRow,
   Tag,
   TextArea,
-  TextInput
+  TextInput,
 };

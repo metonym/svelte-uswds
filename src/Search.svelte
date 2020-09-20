@@ -24,13 +24,23 @@
 <form
   {...$$restProps}
   role="search"
-  class:usa-search={true}
-  class:usa-search--big={big}
-  class:usa-search--small={small}
+  class:usa-search="{true}"
+  class:usa-search--big="{big}"
+  class:usa-search--small="{small}"
   on:submit|preventDefault>
-  <label class="usa-sr-only" for={id}>{label}</label>
-  <input {id} {name} class="usa-input" type="search" on:input on:focus on:blur bind:value />
+  <label class="usa-sr-only" for="{id}">{label}</label>
+  <input
+    id="{id}"
+    name="{name}"
+    class="usa-input"
+    type="search"
+    on:input
+    on:focus
+    on:blur
+    bind:value />
   <button class="usa-button" type="submit">
-    <span class:usa-sr-only={small} class:usa-search__submit-text={!small}>{label}</span>
+    <span
+      class:usa-sr-only="{small}"
+      class:usa-search__submit-text="{!small}">{label}</span>
   </button>
 </form>

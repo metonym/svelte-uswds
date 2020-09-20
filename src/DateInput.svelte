@@ -19,42 +19,42 @@
 </script>
 
 <legend class="usa-legend">{legend}</legend>
-<span class="usa-hint" {id}>{hint}</span>
+<span class="usa-hint" id="{id}">{hint}</span>
 <div class="usa-memorable-date">
   <div class="usa-form-group usa-form-group--month">
     <label class="usa-label" for="month-{id}">Month</label>
     <input
       class="usa-input usa-input--inline"
-      aria-describedby={id}
+      aria-describedby="{id}"
       id="month-{id}"
       name="month-{id}"
       type="number"
       min="1"
       max="12"
-      bind:value={month} />
+      bind:value="{month}" />
   </div>
   <div class="usa-form-group usa-form-group--day">
     <label class="usa-label" for="day-{id}">Day</label>
     <input
       class="usa-input usa-input--inline"
-      aria-describedby={id}
+      aria-describedby="{id}"
       id="day-{id}"
       name="day-{id}"
       type="number"
       min="1"
       max="31"
-      bind:value={day} />
+      bind:value="{day}" />
   </div>
   <div class="usa-form-group usa-form-group--year">
     <label class="usa-label" for="year-{id}">Year</label>
     <input
       class="usa-input usa-input--inline"
-      aria-describedby={id}
+      aria-describedby="{id}"
       id="year-{id}"
       name="year-{id}"
       type="number"
-      min={minYear}
-      max={maxYear}
-      bind:value={year} />
+      min="{minYear}"
+      max="{maxYear}"
+      bind:value="{year}" />
   </div>
 </div>

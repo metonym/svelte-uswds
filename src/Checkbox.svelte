@@ -24,7 +24,7 @@
 
   $: if (ctx !== undefined) {
     ctx.add({ id, value, label, checked });
-    unsubscribe = ctx.items.subscribe(value => {
+    unsubscribe = ctx.items.subscribe((value) => {
       if (value[id] !== undefined) {
         checked = value[id].checked;
       }
@@ -36,15 +36,15 @@
   <input
     class="usa-checkbox__input"
     type="checkbox"
-    {id}
-    {name}
-    {disabled}
+    id="{id}"
+    name="{name}"
+    disabled="{disabled}"
     bind:checked
     bind:value
     on:focus
     on:blur
     on:change />
-  <label class="usa-checkbox__label" for={id}>
+  <label class="usa-checkbox__label" for="{id}">
     <slot>{label}</slot>
   </label>
 </div>

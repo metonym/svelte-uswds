@@ -7,15 +7,15 @@
 
 <button
   {...$$restProps}
-  class:usa-button={true}
-  class:usa-button--secondary={kind === 'secondary'}
-  class:usa-button--accent-cool={kind === 'accent-cool'}
-  class:usa-button--base={kind === 'base'}
-  class:usa-button--outline={kind === 'outline' || kind === 'outline-inverse'}
-  class:usa-button--inverse={kind === 'outline-inverse'}
-  class:usa-button--big={big}
-  class:usa-button--unstyled={unstyled}
-  {disabled}
+  class:usa-button="{true}"
+  class:usa-button--secondary="{kind === 'secondary'}"
+  class:usa-button--accent-cool="{kind === 'accent-cool'}"
+  class:usa-button--base="{kind === 'base'}"
+  class:usa-button--outline="{kind === 'outline' || kind === 'outline-inverse'}"
+  class:usa-button--inverse="{kind === 'outline-inverse'}"
+  class:usa-button--big="{big}"
+  class:usa-button--unstyled="{unstyled}"
+  disabled="{disabled}"
   on:click
   on:mouseover
   on:mouseenter

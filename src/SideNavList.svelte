@@ -8,7 +8,7 @@
 
 <ul
   {...$$restProps}
-  class:usa-sidenav={ctx === undefined}
-  class:usa-sidenav__sublist={ctx !== undefined}>
+  class:usa-sidenav="{ctx === undefined}"
+  class:usa-sidenav__sublist="{ctx !== undefined}">
   <slot />
 </ul>

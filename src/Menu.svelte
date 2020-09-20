@@ -20,30 +20,34 @@
 </script>
 
 <svelte:body
-  on:click={({ target }) => {
+  on:click="{({ target }) => {
     if (expanded && ref && !ref.contains(target)) {
       expanded = false;
     }
-  }} />
+  }}" />
 
 {#if secondary}
-  <ul {...$$restProps} class:usa-nav__secondary-links={true}>
+  <ul {...$$restProps} class:usa-nav__secondary-links="{true}">
     <slot />
   </ul>
 {:else}
-  <li {...$$restProps} bind:this={ref} class="usa-nav__primary-item">
+  <li {...$$restProps} bind:this="{ref}" class="usa-nav__primary-item">
     <button
       class="usa-accordion__button usa-nav__link"
-      class:usa-current={current}
-      aria-expanded={expanded}
-      aria-controls={id}
+      class:usa-current="{current}"
+      aria-expanded="{expanded}"
+      aria-controls="{id}"
       on:click
-      on:click={() => {
+      on:click="{() => {
         expanded = !expanded;
-      }}>
+      }}">
       <span>{buttonText}</span>
     </button>
-    <ul {id} class="usa-nav__submenu" class:usa-megamenu={mega} hidden={!expanded}>
+    <ul
+      id="{id}"
+      class="usa-nav__submenu"
+      class:usa-megamenu="{mega}"
+      hidden="{!expanded}">
       <slot />
     </ul>
   </li>

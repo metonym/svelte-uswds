@@ -14,50 +14,49 @@
 
 {#if error}
   <div class="usa-form-group usa-form-group--error">
-    <label class="usa-label usa-label--error" for={id}>
+    <label class="usa-label usa-label--error" for="{id}">
       {label}
-      {#if !required}
-        <span class="usa-hint">(optional)</span>
-      {/if}
+      {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span class="usa-error-message" id="error-{id}" role="alert">{errorText}</span>
+    <span
+      class="usa-error-message"
+      id="error-{id}"
+      role="alert">{errorText}</span>
     <select
       class="usa-select usa-input--error"
-      {name}
-      {disabled}
-      {id}
-      {readonly}
+      name="{name}"
+      disabled="{disabled}"
+      id="{id}"
+      readonly="{readonly}"
       on:change
-      on:change={({ target }) => {
+      on:change="{({ target }) => {
         selected = target.value;
-      }}>
+      }}">
       {#each options as option}
-        <option value={option.value} selected={selected === option.value}>
+        <option value="{option.value}" selected="{selected === option.value}">
           {option.text || option.value}
         </option>
       {/each}
     </select>
   </div>
 {:else}
-  <label class="usa-label" for={id}>
+  <label class="usa-label" for="{id}">
     {label}
-    {#if !required}
-      <span class="usa-hint">(optional)</span>
-    {/if}
+    {#if !required}<span class="usa-hint">(optional)</span>{/if}
   </label>
   <select
     class="usa-select"
-    class:usa-input--success={success}
-    {name}
-    {disabled}
-    {id}
-    {readonly}
+    class:usa-input--success="{success}"
+    name="{name}"
+    disabled="{disabled}"
+    id="{id}"
+    readonly="{readonly}"
     on:change
-    on:change={({ target }) => {
+    on:change="{({ target }) => {
       selected = target.value;
-    }}>
+    }}">
     {#each options as option}
-      <option value={option.value} selected={selected === option.value}>
+      <option value="{option.value}" selected="{selected === option.value}">
         {option.text || option.value}
       </option>
     {/each}

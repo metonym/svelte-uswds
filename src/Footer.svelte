@@ -22,9 +22,9 @@
 
 <footer
   {...$$restProps}
-  class:usa-footer={true}
-  class:usa-footer--big={big}
-  class:usa-footer--slim={slim}>
+  class:usa-footer="{true}"
+  class:usa-footer--big="{big}"
+  class:usa-footer--slim="{slim}">
   <slot />
   <div class="usa-footer__primary-section">
     {#if medium}
@@ -34,14 +34,14 @@
         <slot name="primary" />
       </Grid>
     {/if}
-
   </div>
   <div class="usa-footer__secondary-section">
     <Grid>
       <slot name="secondary">
         {#if !slim}
           <Grid row gutters>
-            <div class="usa-footer__logo mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+            <div
+              class="usa-footer__logo mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
               <slot name="secondary-left" />
             </div>
             <div class="usa-footer__contact-links mobile-lg:grid-col-6">

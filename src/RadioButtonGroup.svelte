@@ -3,20 +3,26 @@
   export let disabled = false;
   export let value = undefined; // string
 
-  import { setContext, onMount, afterUpdate, createEventDispatcher, tick } from "svelte";
+  import {
+    setContext,
+    onMount,
+    afterUpdate,
+    createEventDispatcher,
+    tick,
+  } from "svelte";
   import { writable, derived } from "svelte/store";
 
   const dispatch = createEventDispatcher();
   const items = writable({});
-  const flat = derived(items, _ => Object.values(_));
-  const state = derived(flat, _ => _.map(({ checked }) => checked).join(""));
+  const flat = derived(items, (_) => Object.values(_));
+  const state = derived(flat, (_) => _.map(({ checked }) => checked).join(""));
 
   let prevState = undefined;
   let prevValue = value;
 
   function updateValues(item) {
-    items.update(_ => {
-      Object.keys(_).forEach(id => {
+    items.update((_) => {
+      Object.keys(_).forEach((id) => {
         _[id].checked = id === item.id;
       });
 
@@ -26,23 +32,23 @@
 
   setContext("RadioButtonGroup", {
     items,
-    add: item => {
-      items.update(_ => ({ ..._, [item.id]: item }));
+    add: (item) => {
+      items.update((_) => ({ ..._, [item.id]: item }));
     },
     toggle: updateValues,
-    remove: item => {
-      items.update(_ => {
+    remove: (item) => {
+      items.update((_) => {
         delete _[item.id];
         return _;
       });
-    }
+    },
   });
 
   onMount(() => {
     if ($flat.filter(({ checked }) => checked).length === 0) {
-      const item = $flat.filter(_ => _.value === value)[0] || $flat[0];
+      const item = $flat.filter((_) => _.value === value)[0] || $flat[0];
 
-      items.update(_ => {
+      items.update((_) => {
         _[item.id].checked = true;
         return _;
       });
@@ -53,7 +59,9 @@
     if (value !== prevValue) {
       prevValue = value;
 
-      const selected = Object.values($items).filter(_ => _.value === value)[0];
+      const selected = Object.values($items).filter(
+        (_) => _.value === value
+      )[0];
 
       if (selected !== undefined) {
         updateValues(selected);
@@ -72,7 +80,7 @@
         selected_index: Object.keys($items).indexOf(selected.id),
         selected,
         items: $items,
-        flat: $flat
+        flat: $flat,
       });
     }
 
@@ -80,7 +88,7 @@
   });
 </script>
 
-<fieldset class="usa-fieldset" {disabled}>
+<fieldset class="usa-fieldset" disabled="{disabled}">
   <legend class="usa-sr-only">{legend}</legend>
   <slot />
 </fieldset>

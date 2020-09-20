@@ -15,44 +15,45 @@
 
 {#if error}
   <div class="usa-form-group usa-form-group--error">
-    <label class="usa-label usa-label--error" for={id}>
+    <label class="usa-label usa-label--error" for="{id}">
       {label}
-      {#if !required}
-        <span class="usa-hint">(optional)</span>
-      {/if}
+      {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span class="usa-error-message" id="error-${id}" role="alert">{errorText}</span>
+    <span
+      class="usa-error-message"
+      id="error-${id}"
+      role="alert">{errorText}</span>
     <input
       class="usa-range usa-input--error"
       type="range"
-      {id}
-      {disabled}
-      {readonly}
-      {required}
-      aria-required={required}
-      {min}
-      {max}
-      {step}
-      {value}
+      id="{id}"
+      disabled="{disabled}"
+      readonly="{readonly}"
+      required="{required}"
+      aria-required="{required}"
+      min="{min}"
+      max="{max}"
+      step="{step}"
+      value="{value}"
       on:focus
       on:blur
       on:change />
   </div>
 {:else}
-  <label class="usa-label" for={id}>{label}</label>
+  <label class="usa-label" for="{id}">{label}</label>
   <input
     class="usa-range"
-    class:usa-input--success={success}
+    class:usa-input--success="{success}"
     type="range"
-    {id}
-    {disabled}
-    {readonly}
-    {required}
-    aria-required={required}
-    {min}
-    {max}
-    {step}
-    {value}
+    id="{id}"
+    disabled="{disabled}"
+    readonly="{readonly}"
+    required="{required}"
+    aria-required="{required}"
+    min="{min}"
+    max="{max}"
+    step="{step}"
+    value="{value}"
     on:focus
     on:blur
     on:change />

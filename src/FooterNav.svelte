@@ -13,7 +13,7 @@
   });
 
   $: if (ctx !== undefined) {
-    unsubscribe = ctx.big.subscribe(state => {
+    unsubscribe = ctx.big.subscribe((state) => {
       big = state;
     });
   }
@@ -21,8 +21,8 @@
 
 <nav
   {...$$restProps}
-  class:usa-footer__nav={true}
-  aria-label={$$props['aria-label'] || 'Footer navigation'}>
+  class:usa-footer__nav="{true}"
+  aria-label="{$$props['aria-label'] || 'Footer navigation'}">
   {#if big}
     <slot />
   {:else}

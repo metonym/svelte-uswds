@@ -4,11 +4,17 @@
 </script>
 
 {#if ordered}
-  <ol {...$$restProps} class:usa-list={true} class:usa-list--unstyled={unstyled}>
+  <ol
+    {...$$restProps}
+    class:usa-list="{true}"
+    class:usa-list--unstyled="{unstyled}">
     <slot />
   </ol>
 {:else}
-  <ul {...$$restProps} class:usa-list={true} class:usa-list--unstyled={unstyled}>
+  <ul
+    {...$$restProps}
+    class:usa-list="{true}"
+    class:usa-list--unstyled="{unstyled}">
     <slot />
   </ul>
 {/if}

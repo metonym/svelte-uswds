@@ -6,12 +6,12 @@
 
   setContext("TableRow", {
     cells,
-    add: id => {
-      cells.update(_ => [..._, id]);
+    add: (id) => {
+      cells.update((_) => [..._, id]);
     },
-    remove: id => {
-      cells.set($cells.filter(cell_id => cell_id !== id));
-    }
+    remove: (id) => {
+      cells.set($cells.filter((cell_id) => cell_id !== id));
+    },
   });
 </script>
 

@@ -9,6 +9,12 @@
   }
 </script>
 
-<a {...$$restProps} class:usa-link={true} class:usa-link--external={external} {href} {target} {rel}>
+<a
+  {...$$restProps}
+  class:usa-link="{true}"
+  class:usa-link--external="{external}"
+  href="{href}"
+  target="{target}"
+  rel="{rel}">
   <slot />
 </a>

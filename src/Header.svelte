@@ -42,18 +42,18 @@
 
 <div
   class="usa-overlay"
-  class:is-visible={$visible}
-  on:click={() => {
+  class:is-visible="{$visible}"
+  on:click="{() => {
     if ($visible) {
       visible.set(!$visible);
     }
-  }} />
+  }}"></div>
 
 <header
   {...$$restProps}
-  class:usa-header={true}
-  class:usa-header--basic={basic}
-  class:usa-header--extended={$_extended}>
+  class:usa-header="{true}"
+  class:usa-header--basic="{basic}"
+  class:usa-header--extended="{$_extended}">
   {#if $_extended}
     <slot />
   {:else}

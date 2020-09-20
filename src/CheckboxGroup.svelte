@@ -3,22 +3,28 @@
   export let disabled = false;
   export let values = undefined; // string[]
 
-  import { onMount, setContext, afterUpdate, createEventDispatcher, tick } from "svelte";
+  import {
+    onMount,
+    setContext,
+    afterUpdate,
+    createEventDispatcher,
+    tick,
+  } from "svelte";
   import { writable, derived } from "svelte/store";
   import Fieldset from "./Fieldset.svelte";
 
   const dispatch = createEventDispatcher();
   const items = writable({});
-  const flat = derived(items, _ => Object.values(_));
-  const state = derived(flat, _ => _.map(({ checked }) => checked).join(""));
+  const flat = derived(items, (_) => Object.values(_));
+  const state = derived(flat, (_) => _.map(({ checked }) => checked).join(""));
 
   let prevState = undefined;
   let prevValues = values;
 
   function updateValues() {
     if (values !== undefined && Array.isArray(values)) {
-      items.update(_ => {
-        $flat.forEach(item => {
+      items.update((_) => {
+        $flat.forEach((item) => {
           _[item.id].checked = values.includes(item.value);
         });
 
@@ -29,15 +35,15 @@
 
   setContext("CheckboxGroup", {
     items,
-    add: item => {
-      items.update(_ => ({ ..._, [item.id]: item }));
+    add: (item) => {
+      items.update((_) => ({ ..._, [item.id]: item }));
     },
-    remove: item => {
-      items.update(_ => {
+    remove: (item) => {
+      items.update((_) => {
         delete _[item.id];
         return _;
       });
-    }
+    },
   });
 
   onMount(() => {
@@ -53,18 +59,18 @@
     await tick();
 
     if (prevState !== undefined && $state !== prevState) {
-      const checked = $flat.filter(_ => _.checked);
-      const unchecked = $flat.filter(_ => !_.checked);
+      const checked = $flat.filter((_) => _.checked);
+      const unchecked = $flat.filter((_) => !_.checked);
 
-      values = checked.map(_ => _.value);
+      values = checked.map((_) => _.value);
 
       dispatch("change", {
         checked,
-        checked_ids: checked.map(_ => _.id),
+        checked_ids: checked.map((_) => _.id),
         unchecked,
-        unchecked_ids: unchecked.map(_ => _.id),
+        unchecked_ids: unchecked.map((_) => _.id),
         items: $items,
-        flat: $flat
+        flat: $flat,
       });
     }
 
@@ -72,6 +78,10 @@
   });
 </script>
 
-<Fieldset class="usa-fieldset" {legend} {disabled} hideLegend>
+<Fieldset
+  class="usa-fieldset"
+  legend="{legend}"
+  disabled="{disabled}"
+  hideLegend>
   <slot />
 </Fieldset>

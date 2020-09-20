@@ -22,30 +22,30 @@
 
   $: if (ctx !== undefined) {
     ctx.add({ id, expanded });
-    unsubscribe = ctx.items.subscribe(value => {
+    unsubscribe = ctx.items.subscribe((value) => {
       expanded = value[id];
     });
   }
 </script>
 
-<h2 {...$$restProps} class:usa-accordion__heading={true}>
+<h2 {...$$restProps} class:usa-accordion__heading="{true}">
   <button
-    bind:this={ref}
+    bind:this="{ref}"
     class="usa-accordion__button"
-    aria-expanded={expanded}
-    aria-controls={id}
+    aria-expanded="{expanded}"
+    aria-controls="{id}"
     on:click
-    on:click={() => {
+    on:click="{() => {
       if (ctx !== undefined) {
         ctx.toggle({ id, expanded: !expanded });
         if (expanded && ref && ref.getBoundingClientRect().top < 0) {
           ref.scrollIntoView();
         }
       }
-    }}>
+    }}">
     {title}
   </button>
 </h2>
-<div class="usa-accordion__content usa-prose" {id} hidden={!expanded}>
+<div class="usa-accordion__content usa-prose" id="{id}" hidden="{!expanded}">
   <slot />
 </div>

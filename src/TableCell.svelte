@@ -22,23 +22,23 @@
 
   $: if (ctxTableRow !== undefined) {
     ctxTableRow.add(id);
-    unsubscribe = ctxTableRow.cells.subscribe(value => {
+    unsubscribe = ctxTableRow.cells.subscribe((value) => {
       firstTd = value.indexOf(id) === 0;
     });
   }
 </script>
 
 {#if ctxTableHead}
-  <th {...$$restProps} on:click scope="col" class:text-tabular={tabular}>
+  <th {...$$restProps} on:click scope="col" class:text-tabular="{tabular}">
     <slot />
   </th>
 {:else}
   {#if firstTd}
-    <th {...$$restProps} on:click scope="row" class:text-tabular={tabular}>
+    <th {...$$restProps} on:click scope="row" class:text-tabular="{tabular}">
       <slot />
     </th>
   {:else}
-    <td {...$$restProps} on:click class:text-tabular={tabular}>
+    <td {...$$restProps} on:click class:text-tabular="{tabular}">
       <slot />
     </td>
   {/if}
