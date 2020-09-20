@@ -4,27 +4,23 @@
   "license": "MIT",
   "description": "Svelte component library that implements the U.S. Web Design System",
   "author": "Eric Liu (https://github.com/metonym)",
-  "svelte": "src/index.js",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
+  "svelte": "./src/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c",
-    "prepublishOnly": "rollup -c && prettier --write 'src/**/*.{js,svelte}'"
-  },
-  "peerDependencies": {
-    "svelte": "^3.20.x"
+    "prepack": "rollup -c && prettier --write 'src/**/*.{js,svelte}'"
   },
   "devDependencies": {
-    "prettier": "1.19.1",
-    "prettier-plugin-svelte": "0.7.0",
-    "rollup": "^2.3.4",
+    "prettier": "2.1.2",
+    "prettier-plugin-svelte": "1.2.1",
+    "rollup": "^2.27.1",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^5.2.1",
-    "svelte": "^3.20.x"
+    "rollup-plugin-svelte": "^6.0.1",
+    "svelte": "^3.25.1"
   },
   "prettier": {
-    "printWidth": 100
+    "svelteStrictMode": true
   },
   "repository": {
     "type": "git",
