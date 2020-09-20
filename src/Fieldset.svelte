@@ -1,4 +1,7 @@
 <script>
+  /**
+   * @type {string} [legend="Legend"]
+   */
   export let legend = "Legend";
 
   /**
