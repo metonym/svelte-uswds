@@ -3,7 +3,7 @@
   import Layout from "./Layout.svelte";
 
   $: code = `<script>
-  import { RadioButton, RadioButtonGroup } from 'svelte-uswds';
+  import { RadioButton, RadioButtonGroup } from "svelte-uswds";
 <\/script>
 
 <RadioButtonGroup>
@@ -13,7 +13,7 @@
 </RadioButtonGroup>`;
 </script>
 
-<Layout componentName="RadioButton" {code}>
+<Layout componentName="RadioButton" code="{code}">
   <RadioButtonGroup>
     <RadioButton value="stanton" label="Elizabeth Cady Stanton" />
     <RadioButton value="anthony" label="Susan B. Anthony" />

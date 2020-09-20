@@ -6,7 +6,7 @@
   const options = [
     { value: "George Washington" },
     { value: "John Adams" },
-    { value: "Thomas Jefferson" }
+    { value: "Thomas Jefferson" },
   ];
 
   let selected = undefined;
@@ -21,7 +21,7 @@
   $: selected = selectJohnAdams ? options[1].value : undefined;
   $: props = [`${selectJohnAdams ? ` selected="${selected}"` : ""}`].join("");
   $: code = `<script>
-  import { Dropdown } from 'svelte-uswds';
+  import { Dropdown } from "svelte-uswds";
 
   const options = [
     { value: "George Washington" },
@@ -33,16 +33,15 @@
 <Dropdown${props} {options} />`;
 </script>
 
-<Layout componentName="Dropdown" {code}>
-  <Dropdown bind:selected {options} />
+<Layout componentName="Dropdown" code="{code}">
+  <Dropdown bind:selected options="{options}" />
 
   <div slot="props">
     <Grid row gutters>
       <Grid col auto>
-        <Checkbox bind:checked={selectJohnAdams} value="selected">
-          Set
-          <code class="font-mono-xs padding-05 radius-sm">selected</code>
-          to "John Adams"
+        <Checkbox bind:checked="{selectJohnAdams}" value="selected">
+          Set <code class="font-mono-xs padding-05 radius-sm">selected</code> to
+          "John Adams"
         </Checkbox>
       </Grid>
     </Grid>

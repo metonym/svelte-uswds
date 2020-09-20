@@ -3,7 +3,7 @@
   import Layout from "./Layout.svelte";
 
   $: code = `<script>
-  import { Grid } from 'svelte-uswds';
+  import { Grid } from "svelte-uswds";
 <\/script>
 
 <Grid>
@@ -16,7 +16,7 @@
 </Grid>`;
 </script>
 
-<Layout componentName="Grid" {code} hideProps>
+<Layout componentName="Grid" code="{code}" hideProps>
   <Grid>
     <Grid row>
       <Grid col>1</Grid>

@@ -7,8 +7,8 @@
   $: buttonGroupProps = { segmented };
   $: props = [`${segmented ? " segmented" : ""}`].join("");
   $: code = `<script>
-    import { ButtonGroup, Button } from 'svelte-uswds';
-  <\/script>
+  import { ButtonGroup, Button } from "svelte-uswds";
+<\/script>
   
 <ButtonGroup${props}>
   <li class="usa-button-group__item">

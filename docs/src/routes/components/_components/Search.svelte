@@ -7,38 +7,38 @@
 
   $: props = [`${big ? ` big` : ""}`, `${small ? ` small` : ""}`].join("");
   $: code = `<script>
-  import { Search } from 'svelte-uswds';
+  import { Search } from "svelte-uswds";
 <\/script>
 
 <Search${props} />`;
 </script>
 
-<Layout componentName="Search" {code}>
-  <Search {big} {small} />
+<Layout componentName="Search" code="{code}">
+  <Search big="{big}" small="{small}" />
 
   <div slot="props">
     <Grid row gutters>
       <Grid col auto>
         <Checkbox
-          checked={big}
+          checked="{big}"
           value="big"
-          on:change={({ target }) => {
+          on:change="{({ target }) => {
             big = target.checked;
             if (target.checked) {
               small = false;
             }
-          }}>
+          }}">
           <code class="font-mono-xs padding-05 radius-sm">big</code>
         </Checkbox>
         <Checkbox
-          checked={small}
+          checked="{small}"
           value="small"
-          on:change={({ target }) => {
+          on:change="{({ target }) => {
             small = target.checked;
             if (target.checked) {
               big = false;
             }
-          }}>
+          }}">
           <code class="font-mono-xs padding-05 radius-sm">small</code>
         </Checkbox>
       </Grid>

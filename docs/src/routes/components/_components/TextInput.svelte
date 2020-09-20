@@ -5,24 +5,27 @@
   let required = false;
   let disabled = false;
 
-  $: props = [`${required ? ` required` : ""}`, `${disabled ? ` disabled` : ""}`].join("");
+  $: props = [
+    `${required ? ` required` : ""}`,
+    `${disabled ? ` disabled` : ""}`,
+  ].join("");
   $: code = `<script>
-  import { TextInput } from 'svelte-uswds';
+  import { TextInput } from "svelte-uswds";
 <\/script>
 
 <TextInput${props} label="Text input" />`;
 </script>
 
-<Layout componentName="TextInput" {code}>
-  <TextInput {required} {disabled} label="Text input" />
+<Layout componentName="TextInput" code="{code}">
+  <TextInput required="{required}" disabled="{disabled}" label="Text input" />
 
   <div slot="props">
     <Grid row gutters>
       <Grid col auto>
-        <Checkbox bind:checked={required} value="required">
+        <Checkbox bind:checked="{required}" value="required">
           <code class="font-mono-xs padding-05 radius-sm">required</code>
         </Checkbox>
-        <Checkbox bind:checked={disabled} value="disabled">
+        <Checkbox bind:checked="{disabled}" value="disabled">
           <code class="font-mono-xs padding-05 radius-sm">disabled</code>
         </Checkbox>
       </Grid>

@@ -10,10 +10,10 @@
   $: props = [
     `${big ? " big" : ""}`,
     `${unstyled ? " unstyled" : ""}`,
-    `${disabled ? " disabled" : ""}`
+    `${disabled ? " disabled" : ""}`,
   ].join("");
   $: code = `<script>
-  import { Button } from 'svelte-uswds';
+  import { Button } from "svelte-uswds";
 <\/script>
 
 <Button kind="default"${props}>Default button</Button>
@@ -33,7 +33,7 @@
   }
 </style>
 
-<Layout componentName="Button" {code}>
+<Layout componentName="Button" code="{code}">
   <div class="wrapper">
     <Button kind="default" {...buttonProps}>Default button</Button>
     <Button kind="secondary" {...buttonProps}>Secondary button</Button>
@@ -41,20 +41,22 @@
     <Button kind="base" {...buttonProps}>Base button</Button>
     <Button kind="outline" {...buttonProps}>Outline button</Button>
     <div class="bg-base-darkest padding-1" style="max-width: fit-content">
-      <Button kind="outline-inverse" {...buttonProps}>Outline inverse button</Button>
+      <Button kind="outline-inverse" {...buttonProps}>
+        Outline inverse button
+      </Button>
     </div>
   </div>
 
   <div slot="props">
     <Grid row gutters>
       <Grid col auto>
-        <Checkbox bind:checked={big} value="big">
+        <Checkbox bind:checked="{big}" value="big">
           <code class="font-mono-xs padding-05 radius-sm">big</code>
         </Checkbox>
-        <Checkbox bind:checked={unstyled} value="unstyled">
+        <Checkbox bind:checked="{unstyled}" value="unstyled">
           <code class="font-mono-xs padding-05 radius-sm">unstyled</code>
         </Checkbox>
-        <Checkbox bind:checked={disabled} value="disabled">
+        <Checkbox bind:checked="{disabled}" value="disabled">
           <code class="font-mono-xs padding-05 radius-sm">disabled</code>
         </Checkbox>
       </Grid>

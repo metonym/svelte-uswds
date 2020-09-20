@@ -13,7 +13,7 @@
   $: breadcrumbProps = { wrap };
   $: props = [`${wrap ? " wrap" : ""}`].join("");
   $: code = `<script>
-  import { Breadcrumb } from 'svelte-uswds';
+  import { Breadcrumb } from "svelte-uswds";
 
   const items = ${JSON.stringify(items)};
 <\/script>

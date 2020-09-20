@@ -3,7 +3,7 @@
   import Layout from "./Layout.svelte";
 
   $: code = `<script>
-  import { SideNav, SideNavList, SideNavLink } from 'svelte-uswds';
+  import { SideNav, SideNavList, SideNavLink } from "svelte-uswds";
 <\/script>
 
 <SideNav>
@@ -25,7 +25,7 @@
 </SideNav>`;
 </script>
 
-<Layout componentName="SideNav" {code} hideProps>
+<Layout componentName="SideNav" code="{code}" hideProps>
   <SideNav>
     <SideNavList>
       <SideNavLink href="/components/sidenav/" text="Current page" current />
