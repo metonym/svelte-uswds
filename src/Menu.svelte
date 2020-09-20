@@ -32,7 +32,7 @@
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
 
-  let ref = undefined;
+  let ref = null;
   let _secondary = writable(secondary);
 
   setContext("Menu", { secondary: _secondary });

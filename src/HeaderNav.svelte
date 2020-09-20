@@ -5,7 +5,7 @@
 
   let unsubscribe_visible = undefined;
   let unsubscribe_extended = undefined;
-  let ref = undefined;
+  let ref = null;
   let visible = false;
   let extended = false;
   let calling = false;

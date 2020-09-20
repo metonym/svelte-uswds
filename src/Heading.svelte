@@ -9,7 +9,7 @@
    */
   export let id = undefined;
 
-  let ref = undefined;
+  let ref = null;
 
   $: if (id === undefined && ref) {
     id = ref.innerText.replace(/\s+/g, "-").toLowerCase();

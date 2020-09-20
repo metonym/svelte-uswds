@@ -8,7 +8,7 @@
     Grid,
     SideNav,
     SideNavList,
-    SideNavLink
+    SideNavLink,
   } from "svelte-uswds";
   import { nav_components } from "./components/_posts";
 
@@ -17,7 +17,7 @@
   let prevPath = undefined;
   let visible = false;
   let mobile = false;
-  let ref = undefined;
+  let ref = null;
 
   const path = writable(segment);
   const slug = writable(undefined);
@@ -152,21 +152,21 @@
 </svelte:head>
 
 <svelte:window
-  on:resize={() => {
+  on:resize="{() => {
     if (ref) {
       mobile = ref.getBoundingClientRect().width !== 0;
     }
-  }} />
+  }}" />
 
 <SkipToMainContent href="{segment}#main-content" />
 
 {#if mobile}
   <div
     class="usa-overlay"
-    class:is-visible={visible}
-    on:click={() => {
+    class:is-visible="{visible}"
+    on:click="{() => {
       visible = false;
-    }} />
+    }}"></div>
 {/if}
 
 <header class="bg-primary-darker">
@@ -194,8 +194,12 @@
       <a
         href="https://github.com/metonym/svelte-uswds/"
         title="View on GitHub"
-        class="link-github ">
-        <svg fill="#fff" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        class="link-github">
+        <svg
+          fill="#fff"
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
           <title>GitHub icon</title>
           <path
             d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
@@ -206,7 +210,7 @@
             1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24
             2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81
             1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592
-            24 12.297c0-6.627-5.373-12-12-12" />
+            24 12.297c0-6.627-5.373-12-12-12"></path>
         </svg>
       </a>
     </Grid>
@@ -214,18 +218,18 @@
 </header>
 
 <button
-  bind:this={ref}
+  bind:this="{ref}"
   class="usa-menu-btn"
-  on:click={() => {
+  on:click="{() => {
     visible = true;
-  }}>
+  }}">
   Menu
 </button>
 
 <aside class:visible>
   <SideNav class="padding-2 margin-top-2">
     <SideNavList class="margin-bottom-4">
-      <SideNavLink href="/" text="Welcome" current={segment === undefined} />
+      <SideNavLink href="/" text="Welcome" current="{segment === undefined}" />
     </SideNavList>
     <SideNavList class="margin-bottom-4">
       <h4 class="margin-2 margin-y-105 text-gray-70">Components</h4>
@@ -233,8 +237,8 @@
         <SideNavLink
           rel="prefetch"
           href="/components/{component.toLowerCase()}/"
-          text={component}
-          current={segment === 'components' && $slug === component.toLowerCase()} />
+          text="{component}"
+          current="{segment === 'components' && $slug === component.toLowerCase()}" />
       {/each}
     </SideNavList>
   </SideNav>
@@ -246,8 +250,8 @@
 
 <footer class="margin-bottom-2">
   <ReturnToTop
-    on:click={() => {
+    on:click="{() => {
       window.scrollTo(0, 0);
-    }}
-    href={returnToTopHref} />
+    }}"
+    href="{returnToTopHref}" />
 </footer>

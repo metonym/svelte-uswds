@@ -18,7 +18,7 @@
 
   const ctx = getContext("Accordion");
 
-  let ref = undefined;
+  let ref = null;
   let unsubscribe = undefined;
 
   onDestroy(() => {
