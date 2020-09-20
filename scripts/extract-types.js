@@ -32,16 +32,29 @@ components.forEach((component) => {
           const name = node.declaration.declarations[0].id.name;
 
           if (!node.leadingComments) {
-            throw Error(
-              `${component}: "${name}" is missing JSDoc type annotations.`
-            );
+            throw Error(`${component}: "${name}" is missing JSDoc comments.`);
           }
 
           const leadingComment = node.leadingComments[0];
 
+          let type_comment = "";
+
+          const type = leadingComment.value
+            .split("@type ")
+            .filter((_) => _.startsWith("{"))[0];
+
+          for (word of type.split(" ")) {
+            if (!word.startsWith("[")) {
+              type_comment += word;
+            } else {
+              break;
+            }
+          }
+
           api.props[name] = {
             name,
             value: node.declaration.declarations[0].init.raw,
+            type: type_comment.substring(1, type_comment.length - 1),
             jsdoc: source.slice(leadingComment.start, leadingComment.end),
           };
           break;
@@ -67,7 +80,7 @@ components.forEach((component) => {
       const value = api.props[key];
 
       props += `${value.jsdoc}\n`;
-      props += `${value.name}: ${value.value};\n\n`;
+      props += `${value.name}?: ${value.type};\n\n`;
     });
 
     let slots = "";

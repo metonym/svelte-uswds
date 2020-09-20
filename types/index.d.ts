@@ -12,12 +12,12 @@ export class Accordion extends UswdsSvelteComponent {
     /**
      * @type {boolean} [multiselectable=false]
      */
-    multiselectable: false;
+    multiselectable?: boolean;
 
     /**
      * @type {boolean} [bordered=false]
      */
-    bordered: false;
+    bordered?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -28,17 +28,17 @@ export class AccordionItem extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [title="Title"]
      */
-    title: "Title";
+    title?: string;
 
     /**
      * @type {boolean} [expanded=false]
      */
-    expanded: false;
+    expanded?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -49,27 +49,27 @@ export class Alert extends UswdsSvelteComponent {
     /**
      * @type {"success" | "warning" | "error" | "info" | "validation"} [kind]
      */
-    kind: undefined;
+    kind?: "success" | "warning" | "error" | "info" | "validation";
 
     /**
      * @type {string} [title]
      */
-    title: undefined;
+    title?: string;
 
     /**
      * @type {"alert" | "alertdialog"} [role]
      */
-    role: undefined;
+    role?: "alert" | "alertdialog";
 
     /**
      * @type {boolean} [slim=false]
      */
-    slim: false;
+    slim?: boolean;
 
     /**
      * @type {boolean} [hideIcon=false]
      */
-    hideIcon: false;
+    hideIcon?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -80,22 +80,22 @@ export class Banner extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {boolean} [expanded=false]
      */
-    expanded: false;
+    expanded?: boolean;
 
     /**
      * @type {string} [headerText="Header text"]
      */
-    headerText: "Header text";
+    headerText?: string;
 
     /**
      * @type {string} [buttonText="Button text"]
      */
-    buttonText: "Button text";
+    buttonText?: string;
   };
 
   $$slot_def: { header: {}; default: {} };
@@ -106,12 +106,12 @@ export class Breadcrumb extends UswdsSvelteComponent {
     /**
      * @type {{ href: string; text: string; }[]} [items=[]]
      */
-    items: undefined;
+    items?: { href: string; text: string }[];
 
     /**
      * @type {boolean} [wrap=false]
      */
-    wrap: false;
+    wrap?: boolean;
   };
 
   $$slot_def: {};
@@ -122,22 +122,28 @@ export class Button extends UswdsSvelteComponent {
     /**
      * @type {"default" | "secondary" | "accent-cool" | "base" | "outline" | "outline-inverse"} [kind="default"]
      */
-    kind: "default";
+    kind?:
+      | "default"
+      | "secondary"
+      | "accent-cool"
+      | "base"
+      | "outline"
+      | "outline-inverse";
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
 
     /**
      * @type {boolean} [big=false]
      */
-    big: false;
+    big?: boolean;
 
     /**
      * @type {boolean} [unstyled=false]
      */
-    unstyled: false;
+    unstyled?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -148,7 +154,7 @@ export class ButtonGroup extends UswdsSvelteComponent {
     /**
      * @type {boolean} [segmented=false]
      */
-    segmented: false;
+    segmented?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -159,47 +165,47 @@ export class Card extends UswdsSvelteComponent {
     /**
      * @type {boolean} [flag=false]
      */
-    flag: false;
+    flag?: boolean;
 
     /**
      * @type {boolean} [mediaRight=false]
      */
-    mediaRight: false;
+    mediaRight?: boolean;
 
     /**
      * @type {string} [heading=""]
      */
-    heading: "";
+    heading?: string;
 
     /**
      * @type {boolean} [headerFirst=false]
      */
-    headerFirst: false;
+    headerFirst?: boolean;
 
     /**
      * @type {string} [buttonText=""]
      */
-    buttonText: "";
+    buttonText?: string;
 
     /**
      * @type {string} [imgSrc]
      */
-    imgSrc: undefined;
+    imgSrc?: string;
 
     /**
      * @type {string} [imgAlt=""]
      */
-    imgAlt: "";
+    imgAlt?: string;
 
     /**
      * @type {boolean} [insetMedia=false]
      */
-    insetMedia: false;
+    insetMedia?: boolean;
 
     /**
      * @type {boolean} [exdentMedia=false]
      */
-    exdentMedia: false;
+    exdentMedia?: boolean;
   };
 
   $$slot_def: { heading: {}; default: {}; button: {} };
@@ -210,33 +216,33 @@ export class Checkbox extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [name=""]
      */
-    name: "";
+    name?: string;
 
     /**
      * @type {string} [value=""]
      */
-    value: "";
+    value?: string;
 
     /**
      * Slottable (default slot)
      * @type {string} [label="Checkbox label"]
      */
-    label: "Checkbox label";
+    label?: string;
 
     /**
      * @type {boolean} [checked=false]
      */
-    checked: false;
+    checked?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -247,17 +253,17 @@ export class CheckboxGroup extends UswdsSvelteComponent {
     /**
      * @type {string[]} [values]
      */
-    values: undefined;
+    values?: string[];
 
     /**
      * @type {string} [legend="Checkbox group"]
      */
-    legend: "Checkbox group";
+    legend?: string;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -274,32 +280,32 @@ export class ChecklistItem extends UswdsSvelteComponent {
     /**
      * @type {*} [test]
      */
-    test: undefined;
+    test?: *;
 
     /**
      * @type {number} [length]
      */
-    length: undefined;
+    length?: number;
 
     /**
      * @type {number} [minLength]
      */
-    minLength: undefined;
+    minLength?: number;
 
     /**
      * @type {number} [maxLength]
      */
-    maxLength: undefined;
+    maxLength?: number;
 
     /**
      * @type {"uppercase" | "lowercase" | "numerical" | "alphanumeric"} [validator]
      */
-    validator: undefined;
+    validator?: "uppercase" | "lowercase" | "numerical" | "alphanumeric";
 
     /**
      * @type {boolean} [checked=false]
      */
-    checked: false;
+    checked?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -310,47 +316,47 @@ export class DateInput extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [legend="Date input"]
      */
-    legend: "Date input";
+    legend?: string;
 
     /**
      * @type {string} [hint="Hint text"]
      */
-    hint: "Hint text";
+    hint?: string;
 
     /**
      * @type {boolean} [today=false]
      */
-    today: false;
+    today?: boolean;
 
     /**
      * @type {number} [month]
      */
-    month: undefined;
+    month?: number;
 
     /**
      * @type {number} [day]
      */
-    day: undefined;
+    day?: number;
 
     /**
      * @type {number} [year]
      */
-    year: undefined;
+    year?: number;
 
     /**
      * @type {number} [maxYear=2020]
      */
-    maxYear: 2020;
+    maxYear?: number;
 
     /**
      * @type {number} [minYear]
      */
-    minYear: undefined;
+    minYear?: number;
   };
 
   $$slot_def: {};
@@ -361,57 +367,57 @@ export class Dropdown extends UswdsSvelteComponent {
     /**
      * @type {{ value: string; text?: string; }[]} [options=[]]
      */
-    options: undefined;
+    options?: { value: string; text?: string }[];
 
     /**
      * @type {string} [selected]
      */
-    selected: undefined;
+    selected?: string;
 
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [label="Dropdown label"]
      */
-    label: "Dropdown label";
+    label?: string;
 
     /**
      * @type {string} [name=""]
      */
-    name: "";
+    name?: string;
 
     /**
      * @type {boolean} [success=false]
      */
-    success: false;
+    success?: boolean;
 
     /**
      * @type {boolean} [error=false]
      */
-    error: false;
+    error?: boolean;
 
     /**
      * @type {string} [errorText="Helpful error message"]
      */
-    errorText: "Helpful error message";
+    errorText?: string;
 
     /**
      * @type {boolean} [readonly=false]
      */
-    readonly: false;
+    readonly?: boolean;
 
     /**
      * @type {boolean} [required=false]
      */
-    required: false;
+    required?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: {};
@@ -422,17 +428,17 @@ export class Fieldset extends UswdsSvelteComponent {
     /**
      * @type {string} [legend="Legend"]
      */
-    legend: "Legend";
+    legend?: string;
 
     /**
      * @type {boolean} [hideLegend=false]
      */
-    hideLegend: false;
+    hideLegend?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -443,17 +449,17 @@ export class Footer extends UswdsSvelteComponent {
     /**
      * @type {boolean} [big=false]
      */
-    big: false;
+    big?: boolean;
 
     /**
      * @type {boolean} [medium=true]
      */
-    medium: true;
+    medium?: boolean;
 
     /**
      * @type {boolean} [slim=false]
      */
-    slim: false;
+    slim?: boolean;
   };
 
   $$slot_def: {
@@ -470,7 +476,7 @@ export class FooterContent extends UswdsSvelteComponent {
     /**
      * @type {string} [topic="Topic"]
      */
-    topic: "Topic";
+    topic?: string;
   };
 
   $$slot_def: { default: {} };
@@ -481,12 +487,12 @@ export class FooterLink extends UswdsSvelteComponent {
     /**
      * @type {string} [href="javascript:void(0);"]
      */
-    href: "javascript:void(0);";
+    href?: string;
 
     /**
      * @type {boolean} [secondary=false]
      */
-    secondary: false;
+    secondary?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -509,37 +515,37 @@ export class Grid extends UswdsSvelteComponent {
     /**
      * @type {boolean} [row=false]
      */
-    row: false;
+    row?: boolean;
 
     /**
      * @type {boolean | "lg" | "2px" | "05" | 1 | 2 | 3 | 4 | 5 | 6} [gutters=false]
      */
-    gutters: false;
+    gutters?: boolean | "lg" | "2px" | "05" | 1 | 2 | 3 | 4 | 5 | 6;
 
     /**
      * @type {boolean | number} [col]
      */
-    col: undefined;
+    col?: boolean | number;
 
     /**
      * @type {"mobile-lg" | "tablet" | "desktop"} [variant]
      */
-    variant: undefined;
+    variant?: "mobile-lg" | "tablet" | "desktop";
 
     /**
      * @type {boolean} [auto=false]
      */
-    auto: false;
+    auto?: boolean;
 
     /**
      * @type {boolean} [fill=false]
      */
-    fill: false;
+    fill?: boolean;
 
     /**
      * @type {number} [offset=0]
      */
-    offset: 0;
+    offset?: number;
   };
 
   $$slot_def: { default: {} };
@@ -550,17 +556,17 @@ export class Header extends UswdsSvelteComponent {
     /**
      * @type {boolean} [basic=true]
      */
-    basic: true;
+    basic?: boolean;
 
     /**
      * @type {boolean} [extended=false]
      */
-    extended: false;
+    extended?: boolean;
 
     /**
      * @type {boolean} [skipNav=false]
      */
-    skipNav: false;
+    skipNav?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -571,12 +577,12 @@ export class HeaderLogo extends UswdsSvelteComponent {
     /**
      * @type {string} [title="Home"]
      */
-    title: "Home";
+    title?: string;
 
     /**
      * @type {string} [href="/"]
      */
-    href: "/";
+    href?: string;
   };
 
   $$slot_def: { default: {} };
@@ -593,12 +599,12 @@ export class Heading extends UswdsSvelteComponent {
     /**
      * @type {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} [tag="h1"]
      */
-    tag: "h1";
+    tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
     /**
      * @type {string} [id]
      */
-    id: undefined;
+    id?: string;
   };
 
   $$slot_def: { default: {} };
@@ -609,7 +615,7 @@ export class Link extends UswdsSvelteComponent {
     /**
      * @type {boolean} [external=false]
      */
-    external: false;
+    external?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -620,12 +626,12 @@ export class List extends UswdsSvelteComponent {
     /**
      * @type {boolean} [ordered=false]
      */
-    ordered: false;
+    ordered?: boolean;
 
     /**
      * @type {boolean} [unstyled=false]
      */
-    unstyled: false;
+    unstyled?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -636,32 +642,32 @@ export class Menu extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [buttonText="Open menu"]
      */
-    buttonText: "Open menu";
+    buttonText?: string;
 
     /**
      * @type {boolean} [current=false]
      */
-    current: false;
+    current?: boolean;
 
     /**
      * @type {boolean} [expanded=false]
      */
-    expanded: false;
+    expanded?: boolean;
 
     /**
      * @type {boolean} [mega=false]
      */
-    mega: false;
+    mega?: boolean;
 
     /**
      * @type {boolean} [secondary=false]
      */
-    secondary: false;
+    secondary?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -672,12 +678,12 @@ export class MenuItem extends UswdsSvelteComponent {
     /**
      * @type {string} [href="javascript:void(0);"]
      */
-    href: "javascript:void(0);";
+    href?: string;
 
     /**
      * @type {boolean} [current=false]
      */
-    current: false;
+    current?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -688,17 +694,17 @@ export class PasswordInput extends UswdsSvelteComponent {
     /**
      * @type {string} [label="Password"]
      */
-    label: "Password";
+    label?: string;
 
     /**
      * @type {boolean} [showPassword=false]
      */
-    showPassword: false;
+    showPassword?: boolean;
 
     /**
      * @type {boolean} [autocomplete=false]
      */
-    autocomplete: true;
+    autocomplete?: boolean;
   };
 
   $$slot_def: {};
@@ -715,32 +721,32 @@ export class RadioButton extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [name=""]
      */
-    name: "";
+    name?: string;
 
     /**
      * @type {string} [value=""]
      */
-    value: "";
+    value?: string;
 
     /**
      * @type {string} [label="Radio button label"]
      */
-    label: "Radio button label";
+    label?: string;
 
     /**
      * @type {boolean} [checked=false]
      */
-    checked: false;
+    checked?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: {};
@@ -751,17 +757,17 @@ export class RadioButtonGroup extends UswdsSvelteComponent {
     /**
      * @type {string} [legend="Radio button group"]
      */
-    legend: "Radio button group";
+    legend?: string;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
 
     /**
      * @type {string} [value]
      */
-    value: undefined;
+    value?: string;
   };
 
   $$slot_def: { default: {} };
@@ -772,62 +778,62 @@ export class RangeSlider extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [label="Range slider"]
      */
-    label: "Range slider";
+    label?: string;
 
     /**
      * @type {number} [min=0]
      */
-    min: 0;
+    min?: number;
 
     /**
      * @type {number} [max=100]
      */
-    max: 100;
+    max?: number;
 
     /**
      * @type {number} [step=10]
      */
-    step: 10;
+    step?: number;
 
     /**
      * @type {number} [value=20]
      */
-    value: 20;
+    value?: number;
 
     /**
      * @type {boolean} [success=false]
      */
-    success: false;
+    success?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    error: false;
+    error?: boolean;
 
     /**
      * @type {string} [errorText="Helpful error message"]
      */
-    errorText: "Helpful error message";
+    errorText?: string;
 
     /**
      * @type {boolean} [readonly=false]
      */
-    readonly: false;
+    readonly?: boolean;
 
     /**
      * @type {boolean} [required=false]
      */
-    required: false;
+    required?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: {};
@@ -838,7 +844,7 @@ export class ReturnToTop extends UswdsSvelteComponent {
     /**
      * @type {string} [href="#"]
      */
-    href: "#";
+    href?: string;
   };
 
   $$slot_def: { default: {} };
@@ -849,32 +855,32 @@ export class Search extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {boolean} [big=false]
      */
-    big: false;
+    big?: boolean;
 
     /**
      * @type {boolean} [small=false]
      */
-    small: false;
+    small?: boolean;
 
     /**
      * @type {string} [label="Search"]
      */
-    label: "Search";
+    label?: string;
 
     /**
      * @type {string} [name="search"]
      */
-    name: "search";
+    name?: string;
 
     /**
      * @type {string} [value=""]
      */
-    value: "";
+    value?: string;
   };
 
   $$slot_def: {};
@@ -891,17 +897,17 @@ export class SideNavLink extends UswdsSvelteComponent {
     /**
      * @type {string} [href=""]
      */
-    href: "";
+    href?: string;
 
     /**
      * @type {string} [text=""]
      */
-    text: "";
+    text?: string;
 
     /**
      * @type {boolean} [current=false]
      */
-    current: false;
+    current?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -918,7 +924,7 @@ export class SkipToMainContent extends UswdsSvelteComponent {
     /**
      * @type {string} [href="#main-content"]
      */
-    href: "#main-content";
+    href?: string;
   };
 
   $$slot_def: { default: {} };
@@ -930,12 +936,12 @@ export class Table extends UswdsSvelteComponent {
      * Slottable as "caption"
      * @type {string} [caption]
      */
-    caption: undefined;
+    caption?: string;
 
     /**
      * @type {boolean} [borderless=false]
      */
-    borderless: false;
+    borderless?: boolean;
   };
 
   $$slot_def: { caption: {}; default: {} };
@@ -952,7 +958,7 @@ export class TableCell extends UswdsSvelteComponent {
     /**
      * @type {boolean} [tabular=false]
      */
-    tabular: false;
+    tabular?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -975,7 +981,7 @@ export class Tag extends UswdsSvelteComponent {
     /**
      * @type {boolean} [big=false]
      */
-    big: false;
+    big?: boolean;
   };
 
   $$slot_def: { default: {} };
@@ -986,52 +992,52 @@ export class TextArea extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [name=""]
      */
-    name: "";
+    name?: string;
 
     /**
      * @type {string} [value=""]
      */
-    value: "";
+    value?: string;
 
     /**
      * @type {string} [label="Text area"]
      */
-    label: "Text area";
+    label?: string;
 
     /**
      * @type {boolean} [success=false]
      */
-    success: false;
+    success?: boolean;
 
     /**
      * @type {boolean} [error=false]
      */
-    error: false;
+    error?: boolean;
 
     /**
      * @type {boolean} [errorText="Helpful error message"]
      */
-    errorText: "Helpful error message";
+    errorText?: boolean;
 
     /**
      * @type {boolean} [readonly=false]
      */
-    readonly: false;
+    readonly?: boolean;
 
     /**
      * @type {boolean} [required=false]
      */
-    required: false;
+    required?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
   };
 
   $$slot_def: {};
@@ -1042,87 +1048,87 @@ export class TextInput extends UswdsSvelteComponent {
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
 
     /**
      * @type {string} [name=""]
      */
-    name: "";
+    name?: string;
 
     /**
      * @type {"text" | "number" | "password"} [type="text"]
      */
-    type: "text";
+    type?: "text" | "number" | "password";
 
     /**
      * @type {string} [value=""]
      */
-    value: "";
+    value?: string;
 
     /**
      * @type {string} [label="Text input"]
      */
-    label: "Text input";
+    label?: string;
 
     /**
      * @type {"small" | "medium"} [size]
      */
-    size: undefined;
+    size?: "small" | "medium";
 
     /**
      * @type {boolean} [success=false]
      */
-    success: false;
+    success?: boolean;
 
     /**
      * @type {boolean} [error=false]
      */
-    error: false;
+    error?: boolean;
 
     /**
      * @type {string} [errorText="Helpful error message"]
      */
-    errorText: "Helpful error message";
+    errorText?: string;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    readonly: false;
+    readonly?: boolean;
 
     /**
      * @type {boolean} [required=false]
      */
-    required: false;
+    required?: boolean;
 
     /**
      * @type {boolean} [disabled=false]
      */
-    disabled: false;
+    disabled?: boolean;
 
     /**
      * @type {string | RegExp} [pattern]
      */
-    pattern: undefined;
+    pattern?: string | RegExp;
 
     /**
      * @type {boolean} [autocapitalize=false]
      */
-    autocapitalize: false;
+    autocapitalize?: boolean;
 
     /**
      * @type {boolean} [autocorrect=false]
      */
-    autocorrect: false;
+    autocorrect?: boolean;
 
     /**
      * @type {boolean} [spellcheck=false]
      */
-    spellcheck: false;
+    spellcheck?: boolean;
 
     /**
      * @type {boolean} [autocomplete=false]
      */
-    autocomplete: false;
+    autocomplete?: boolean;
   };
 
   $$slot_def: {};
@@ -1133,17 +1139,17 @@ export class Tooltip extends UswdsSvelteComponent {
     /**
      * @type {"top" | "bottom" | "right" | "left"} [position="bottom"]
      */
-    position: "bottom";
+    position?: "top" | "bottom" | "right" | "left";
 
     /**
      * @type {string} [tooltipText=""]
      */
-    tooltipText: "";
+    tooltipText?: string;
 
     /**
      * @type {string} [id=""]
      */
-    id: undefined;
+    id?: string;
   };
 
   $$slot_def: { default: {} };
