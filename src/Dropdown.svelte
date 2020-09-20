@@ -22,6 +22,7 @@
       class="usa-error-message"
       id="error-{id}"
       role="alert">{errorText}</span>
+    <!-- svelte-ignore a11y-no-onchange -->
     <select
       class="usa-select usa-input--error"
       name="{name}"
@@ -44,6 +45,7 @@
     {label}
     {#if !required}<span class="usa-hint">(optional)</span>{/if}
   </label>
+  <!-- svelte-ignore a11y-no-onchange -->
   <select
     class="usa-select"
     class:usa-input--success="{success}"
