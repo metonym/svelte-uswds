@@ -21,6 +21,7 @@ import RangeSlider from "./RangeSlider.svelte";
 import SideNav from "./SideNav.svelte";
 import Table from "./Table.svelte";
 import RadioButton from "./RadioButton.svelte";
+import Tooltip from "./Tooltip.svelte";
 
 export {
   Accordion,
@@ -46,4 +47,5 @@ export {
   SideNav,
   Table,
   RadioButton,
+  Tooltip,
 };

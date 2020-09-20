@@ -29,6 +29,7 @@ const components = [
   "Tag",
   "TextArea",
   "TextInput",
+  "Tooltip",
 ];
 
 // Header -> SkipToMainContent, Menu, HeaderNav, HeaderLogo
