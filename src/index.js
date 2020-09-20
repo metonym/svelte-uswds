@@ -1,93 +1,45 @@
-import Accordion from "./Accordion.svelte";
-import AccordionItem from "./AccordionItem.svelte";
-import Alert from "./Alert.svelte";
-import Banner from "./Banner.svelte";
-import Button from "./Button.svelte";
-import Checkbox from "./Checkbox.svelte";
-import CheckboxGroup from "./CheckboxGroup.svelte";
-import Checklist from "./Checklist.svelte";
-import ChecklistItem from "./ChecklistItem.svelte";
-import DateInput from "./DateInput.svelte";
-import Dropdown from "./Dropdown.svelte";
-import Fieldset from "./Fieldset.svelte";
-import Footer from "./Footer.svelte";
-import FooterContent from "./FooterContent.svelte";
-import FooterLink from "./FooterLink.svelte";
-import FooterNav from "./FooterNav.svelte";
-import Form from "./Form.svelte";
-import Grid from "./Grid.svelte";
-import Header from "./Header.svelte";
-import HeaderLogo from "./HeaderLogo.svelte";
-import HeaderNav from "./HeaderNav.svelte";
-import Heading from "./Heading.svelte";
-import Link from "./Link.svelte";
-import List from "./List.svelte";
-import Menu from "./Menu.svelte";
-import MenuItem from "./MenuItem.svelte";
-import PasswordInput from "./PasswordInput.svelte";
-import Prose from "./Prose.svelte";
-import RadioButton from "./RadioButton.svelte";
-import RadioButtonGroup from "./RadioButtonGroup.svelte";
-import RangeSlider from "./RangeSlider.svelte";
-import ReturnToTop from "./ReturnToTop.svelte";
-import Search from "./Search.svelte";
-import SideNav from "./SideNav.svelte";
-import SideNavLink from "./SideNavLink.svelte";
-import SideNavList from "./SideNavList.svelte";
-import SkipToMainContent from "./SkipToMainContent.svelte";
-import Table from "./Table.svelte";
-import TableBody from "./TableBody.svelte";
-import TableCell from "./TableCell.svelte";
-import TableHead from "./TableHead.svelte";
-import TableRow from "./TableRow.svelte";
-import Tag from "./Tag.svelte";
-import TextArea from "./TextArea.svelte";
-import TextInput from "./TextInput.svelte";
-
-export {
-  Accordion,
-  AccordionItem,
-  Alert,
-  Banner,
-  Button,
-  Checkbox,
-  CheckboxGroup,
-  Checklist,
-  ChecklistItem,
-  DateInput,
-  Dropdown,
-  Fieldset,
-  Footer,
-  FooterContent,
-  FooterLink,
-  FooterNav,
-  Form,
-  Grid,
-  Header,
-  HeaderLogo,
-  HeaderNav,
-  Heading,
-  Link,
-  List,
-  Menu,
-  MenuItem,
-  PasswordInput,
-  Prose,
-  RadioButton,
-  RadioButtonGroup,
-  RangeSlider,
-  ReturnToTop,
-  Search,
-  SideNav,
-  SideNavLink,
-  SideNavList,
-  SkipToMainContent,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Tag,
-  TextArea,
-  TextInput,
-};
+export { default as Accordion } from "./Accordion.svelte";
+export { default as AccordionItem } from "./AccordionItem.svelte";
+export { default as Alert } from "./Alert.svelte";
+export { default as Banner } from "./Banner.svelte";
+export { default as Button } from "./Button.svelte";
+export { default as Checkbox } from "./Checkbox.svelte";
+export { default as CheckboxGroup } from "./CheckboxGroup.svelte";
+export { default as Checklist } from "./Checklist.svelte";
+export { default as ChecklistItem } from "./ChecklistItem.svelte";
+export { default as DateInput } from "./DateInput.svelte";
+export { default as Dropdown } from "./Dropdown.svelte";
+export { default as Fieldset } from "./Fieldset.svelte";
+export { default as Footer } from "./Footer.svelte";
+export { default as FooterContent } from "./FooterContent.svelte";
+export { default as FooterLink } from "./FooterLink.svelte";
+export { default as FooterNav } from "./FooterNav.svelte";
+export { default as Form } from "./Form.svelte";
+export { default as Grid } from "./Grid.svelte";
+export { default as Header } from "./Header.svelte";
+export { default as HeaderLogo } from "./HeaderLogo.svelte";
+export { default as HeaderNav } from "./HeaderNav.svelte";
+export { default as Heading } from "./Heading.svelte";
+export { default as Link } from "./Link.svelte";
+export { default as List } from "./List.svelte";
+export { default as Menu } from "./Menu.svelte";
+export { default as MenuItem } from "./MenuItem.svelte";
+export { default as PasswordInput } from "./PasswordInput.svelte";
+export { default as Prose } from "./Prose.svelte";
+export { default as RadioButton } from "./RadioButton.svelte";
+export { default as RadioButtonGroup } from "./RadioButtonGroup.svelte";
+export { default as RangeSlider } from "./RangeSlider.svelte";
+export { default as ReturnToTop } from "./ReturnToTop.svelte";
+export { default as Search } from "./Search.svelte";
+export { default as SideNav } from "./SideNav.svelte";
+export { default as SideNavLink } from "./SideNavLink.svelte";
+export { default as SideNavList } from "./SideNavList.svelte";
+export { default as SkipToMainContent } from "./SkipToMainContent.svelte";
+export { default as Table } from "./Table.svelte";
+export { default as TableBody } from "./TableBody.svelte";
+export { default as TableCell } from "./TableCell.svelte";
+export { default as TableHead } from "./TableHead.svelte";
+export { default as TableRow } from "./TableRow.svelte";
+export { default as Tag } from "./Tag.svelte";
+export { default as TextArea } from "./TextArea.svelte";
+export { default as TextInput } from "./TextInput.svelte";
