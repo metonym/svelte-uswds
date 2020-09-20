@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "develop": "sapper dev",
+    "dev": "sapper dev",
     "build": "sapper export"
   },
   "dependencies": {
@@ -10,12 +10,12 @@
   },
   "devDependencies": {
     "clipboard-copy": "^3.1.0",
-    "prism-svelte": "^0.4.6",
-    "prismjs": "^1.19.0",
+    "prism-svelte": "^0.4.7",
+    "prismjs": "^1.21.0",
     "sapper": "^0.27.0",
-    "svelte": "^3.0.0",
+    "svelte": "^3.25.1",
     "svelte-loader": "^2.9.0",
     "svelte-uswds": "../",
-    "webpack": "^4.7.0"
+    "webpack": "^4.44.2"
   }
 }
