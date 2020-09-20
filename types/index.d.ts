@@ -1,4 +1,4 @@
-// Type definitions for svelte-uswds 0.2.0
+// Type definitions for svelte-uswds 1.0.0
 // Project: https://github.com/metonym/svelte-uswds
 
 export class UswdsSvelteComponent {
