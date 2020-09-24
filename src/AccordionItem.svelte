@@ -53,7 +53,8 @@
           ref.scrollIntoView();
         }
       }
-    }}">
+    }}"
+  >
     {title}
   </button>
 </h2>

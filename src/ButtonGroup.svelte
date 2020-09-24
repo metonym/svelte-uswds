@@ -20,6 +20,7 @@
 <ul
   class:usa-button-group="{true}"
   class:usa-button-group--segmented="{segmented}"
-  {...$$restProps}>
+  {...$$restProps}
+>
   <slot />
 </ul>

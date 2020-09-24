@@ -37,11 +37,13 @@
   <li
     {...$$restProps}
     class:usa-nav__submenu-item="{ctx !== undefined}"
-    class:usa-nav__primary-item="{ctx === undefined}">
+    class:usa-nav__primary-item="{ctx === undefined}"
+  >
     <a
       href="{href}"
       class:usa-nav__link="{ctx === undefined}"
-      class:usa-current="{ctx === undefined && current}">
+      class:usa-current="{ctx === undefined && current}"
+    >
       <slot />
     </a>
   </li>

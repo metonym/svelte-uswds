@@ -69,7 +69,8 @@
     <span
       class="usa-error-message"
       id="error-${id}"
-      role="alert">{errorText}</span>
+      role="alert"
+    >{errorText}</span>
     <input
       class="usa-range usa-input--error"
       type="range"
@@ -84,7 +85,8 @@
       value="{value}"
       on:focus
       on:blur
-      on:change />
+      on:change
+    />
   </div>
 {:else}
   <label class="usa-label" for="{id}">{label}</label>
@@ -103,5 +105,6 @@
     value="{value}"
     on:focus
     on:blur
-    on:change />
+    on:change
+  />
 {/if}

@@ -66,7 +66,8 @@
       type="number"
       min="1"
       max="12"
-      bind:value="{month}" />
+      bind:value="{month}"
+    />
   </div>
   <div class="usa-form-group usa-form-group--day">
     <label class="usa-label" for="day-{id}">Day</label>
@@ -78,7 +79,8 @@
       type="number"
       min="1"
       max="31"
-      bind:value="{day}" />
+      bind:value="{day}"
+    />
   </div>
   <div class="usa-form-group usa-form-group--year">
     <label class="usa-label" for="year-{id}">Year</label>
@@ -90,6 +92,7 @@
       type="number"
       min="{minYear}"
       max="{maxYear}"
-      bind:value="{year}" />
+      bind:value="{year}"
+    />
   </div>
 </div>

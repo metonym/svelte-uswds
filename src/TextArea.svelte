@@ -59,7 +59,8 @@
     <span
       class="usa-error-message"
       id="error-{id}"
-      role="alert">{errorText}</span>
+      role="alert"
+    >{errorText}</span>
     <textarea
       class="usa-textarea usa-input--error"
       type="text"
@@ -75,7 +76,8 @@
       on:input
       on:input="{({ target }) => {
         value = target.value;
-      }}"></textarea>
+      }}"
+    ></textarea>
   </div>
 {:else}
   <label class="usa-label" for="{id}">
@@ -98,5 +100,6 @@
     on:input
     on:input="{({ target }) => {
       value = target.value;
-    }}"></textarea>
+    }}"
+  ></textarea>
 {/if}

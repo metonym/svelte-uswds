@@ -67,7 +67,8 @@
     bind:value
     on:focus
     on:blur
-    on:change />
+    on:change
+  />
   <label class="usa-checkbox__label" for="{id}">
     <slot>{label}</slot>
   </label>

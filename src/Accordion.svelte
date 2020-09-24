@@ -40,6 +40,7 @@
 <div
   {...$$restProps}
   class:usa-accordion="{true}"
-  class:usa-accordion--bordered="{bordered}">
+  class:usa-accordion--bordered="{bordered}"
+>
   <slot />
 </div>

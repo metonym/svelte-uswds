@@ -98,7 +98,8 @@
     <span
       class="usa-error-message"
       id="error-{id}"
-      role="alert">{errorText}</span>
+      role="alert"
+    >{errorText}</span>
     <input
       class="usa-input usa-input--error"
       class:usa-input--small="{size === 'small'}"
@@ -122,7 +123,8 @@
       on:input
       on:input="{({ target }) => {
         value = target.value;
-      }}" />
+      }}"
+    />
   </div>
 {:else}
   <label class="usa-label" for="{id}">
@@ -152,5 +154,6 @@
     on:input
     on:input="{({ target }) => {
       value = target.value;
-    }}" />
+    }}"
+  />
 {/if}

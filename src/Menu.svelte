@@ -63,14 +63,16 @@
       on:click
       on:click="{() => {
         expanded = !expanded;
-      }}">
+      }}"
+    >
       <span>{buttonText}</span>
     </button>
     <ul
       id="{id}"
       class="usa-nav__submenu"
       class:usa-megamenu="{mega}"
-      hidden="{!expanded}">
+      hidden="{!expanded}"
+    >
       <slot />
     </ul>
   </li>

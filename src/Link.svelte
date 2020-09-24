@@ -10,6 +10,7 @@
   rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
   class:usa-link="{true}"
   class:usa-link--external="{external}"
-  {...$$restProps}>
+  {...$$restProps}
+>
   <slot />
 </a>

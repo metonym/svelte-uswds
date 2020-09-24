@@ -30,7 +30,8 @@
   required
   on:focus
   on:blur
-  on:input />
+  on:input
+/>
 <p class="usa-form__note">
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a
@@ -40,7 +41,8 @@
     title="{showPasswordText}"
     on:click|preventDefault="{() => {
       showPassword = !showPassword;
-    }}">
+    }}"
+  >
     {showPasswordText}
   </a>
 </p>

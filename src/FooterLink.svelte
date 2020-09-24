@@ -29,7 +29,8 @@
     {...$$restProps}
     class:mobile-lg:grid-col-6="{true}"
     class:desktop:grid-col-auto="{true}"
-    class:usa-footer__primary-content="{true}">
+    class:usa-footer__primary-content="{true}"
+  >
     <a class:usa-footer__primary-link="{true}" href="{href}">
       <slot />
     </a>

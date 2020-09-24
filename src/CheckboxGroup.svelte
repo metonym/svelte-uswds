@@ -93,6 +93,7 @@
   class="usa-fieldset"
   legend="{legend}"
   disabled="{disabled}"
-  hideLegend>
+  hideLegend
+>
   <slot />
 </Fieldset>

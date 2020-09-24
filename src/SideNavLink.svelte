@@ -21,7 +21,8 @@
     href="{href}"
     on:click
     class:usa-current="{current}"
-    aria-current="{current ? 'page' : undefined}">
+    aria-current="{current ? 'page' : undefined}"
+  >
     {text || href}
   </a>
   <slot />

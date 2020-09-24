@@ -64,7 +64,8 @@
     <span
       class="usa-error-message"
       id="error-{id}"
-      role="alert">{errorText}</span>
+      role="alert"
+    >{errorText}</span>
     <!-- svelte-ignore a11y-no-onchange -->
     <select
       class="usa-select usa-input--error"
@@ -75,7 +76,8 @@
       on:change
       on:change="{({ target }) => {
         selected = target.value;
-      }}">
+      }}"
+    >
       {#each options as option}
         <option value="{option.value}" selected="{selected === option.value}">
           {option.text || option.value}
@@ -99,7 +101,8 @@
     on:change
     on:change="{({ target }) => {
       selected = target.value;
-    }}">
+    }}"
+  >
     {#each options as option}
       <option value="{option.value}" selected="{selected === option.value}">
         {option.text || option.value}

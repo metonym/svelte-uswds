@@ -51,7 +51,8 @@
   class:usa-card--header-first="{headerFirst}"
   class:usa-card--flag="{flag}"
   class:usa-card--media-right="{mediaRight}"
-  {...$$restProps}>
+  {...$$restProps}
+>
   <div class="usa-card__container">
     <header class="usa-card__header">
       <h2 class="usa-card__heading">
@@ -62,7 +63,8 @@
       <div
         class="usa-card__media"
         class:usa-card__media--inset="{insetMedia}"
-        class:usa-card__media--exdent="{exdentMedia}">
+        class:usa-card__media--exdent="{exdentMedia}"
+      >
         <div class="usa-card__img"><img src="{imgSrc}" alt="{imgAlt}" /></div>
       </div>
     {/if}

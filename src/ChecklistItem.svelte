@@ -77,6 +77,7 @@
 <li
   {...$$restProps}
   class:usa-checklist__item="{true}"
-  class:usa-checklist__item--checked="{checked}">
+  class:usa-checklist__item--checked="{checked}"
+>
   <slot />
 </li>

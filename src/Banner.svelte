@@ -24,7 +24,8 @@
   {...$$restProps}
   class:usa-banner="{true}"
   class:usa-banner__header--expanded="{expanded}"
-  aria-label="{$$props['aria-label']}">
+  aria-label="{$$props['aria-label']}"
+>
   <div class="usa-accordion">
     <header class="usa-banner__header">
       <div class="usa-banner__inner">
@@ -43,7 +44,8 @@
           aria-controls="{id}"
           on:click="{() => {
             expanded = !expanded;
-          }}">
+          }}"
+        >
           <span class="usa-banner__button-text">{buttonText}</span>
         </button>
       </div>
@@ -51,7 +53,8 @@
     <div
       id="{id}"
       class="usa-banner__content usa-accordion__content"
-      hidden="{!expanded}">
+      hidden="{!expanded}"
+    >
       <slot />
     </div>
   </div>

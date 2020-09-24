@@ -21,7 +21,8 @@
     "svelte": "^3.25.1"
   },
   "prettier": {
-    "svelteStrictMode": true
+    "svelteStrictMode": true,
+    "svelteBracketNewLine": true
   },
   "repository": {
     "type": "git",

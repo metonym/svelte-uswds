@@ -50,7 +50,8 @@
   class:usa-search="{true}"
   class:usa-search--big="{big}"
   class:usa-search--small="{small}"
-  on:submit|preventDefault>
+  on:submit|preventDefault
+>
   <label class="usa-sr-only" for="{id}">{label}</label>
   <input
     id="{id}"
@@ -60,10 +61,12 @@
     on:input
     on:focus
     on:blur
-    bind:value />
+    bind:value
+  />
   <button class="usa-button" type="submit">
     <span
       class:usa-sr-only="{small}"
-      class:usa-search__submit-text="{!small}">{label}</span>
+      class:usa-search__submit-text="{!small}"
+    >{label}</span>
   </button>
 </form>

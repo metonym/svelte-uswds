@@ -22,7 +22,8 @@
 <nav
   {...$$restProps}
   class:usa-footer__nav="{true}"
-  aria-label="{$$props['aria-label'] || 'Footer navigation'}">
+  aria-label="{$$props['aria-label'] || 'Footer navigation'}"
+>
   {#if big}
     <slot />
   {:else}

@@ -118,6 +118,7 @@
   class:grid-offset-9="{offset === 9}"
   class:grid-offset-10="{offset === 10}"
   class:grid-offset-11="{offset === 11}"
-  class:grid-offset-12="{offset === 12}">
+  class:grid-offset-12="{offset === 12}"
+>
   <slot />
 </div>

@@ -73,7 +73,8 @@
         ctx.mobile.set(ref.getBoundingClientRect().width === 0);
       }
     });
-  }}" />
+  }}"
+/>
 
 <div class="usa-navbar">
   <slot name="navbar" />
@@ -85,14 +86,16 @@
         ctx.mobile.set(true);
         ctx.visible.set(true);
       }
-    }}">
+    }}"
+  >
     Menu
   </button>
 </div>
 <nav
   aria-label="{$$props['aria-label'] || 'Primary navigation'}"
   class:usa-nav="{true}"
-  class:is-visible="{visible}">
+  class:is-visible="{visible}"
+>
   {#if extended}
     <div class="usa-nav__inner">
       <button
@@ -101,12 +104,14 @@
           if (visible && ctx !== undefined) {
             ctx.visible.set(false);
           }
-        }}">
+        }}"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 64 64"
           width="12"
-          fill="#565c65">
+          fill="#565c65"
+        >
           <title>close</title>
           <path
             fill="#565C65"
@@ -114,7 +119,8 @@
             d="M57.042 1.15l5.809 5.808a4 4 0 010 5.657L43.465 32l19.386 19.385a4 4 0 010
             5.657l-5.809 5.809a4 4 0 01-5.657 0L32 43.465 12.615 62.851a4 4 0 01-5.657
             0l-5.809-5.809a4 4 0 010-5.657L20.535 32 1.149 12.615a4 4 0 010-5.657l5.809-5.809a4 4 0
-            015.657 0L32 20.535 51.385 1.149a4 4 0 015.657 0z"></path>
+            015.657 0L32 20.535 51.385 1.149a4 4 0 015.657 0z"
+          ></path>
         </svg>
       </button>
       <ul class="usa-nav__primary usa-accordion">
@@ -131,12 +137,14 @@
         if (visible && ctx !== undefined) {
           ctx.visible.set(false);
         }
-      }}">
+      }}"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 64 64"
         width="12"
-        fill="#565c65">
+        fill="#565c65"
+      >
         <title>close</title>
         <path
           fill="#565C65"
@@ -144,7 +152,8 @@
           d="M57.042 1.15l5.809 5.808a4 4 0 010 5.657L43.465 32l19.386 19.385a4 4 0 010 5.657l-5.809
           5.809a4 4 0 01-5.657 0L32 43.465 12.615 62.851a4 4 0 01-5.657 0l-5.809-5.809a4 4 0
           010-5.657L20.535 32 1.149 12.615a4 4 0 010-5.657l5.809-5.809a4 4 0 015.657 0L32 20.535
-          51.385 1.149a4 4 0 015.657 0z"></path>
+          51.385 1.149a4 4 0 015.657 0z"
+        ></path>
       </svg>
     </button>
     <ul class="usa-nav__primary usa-accordion">

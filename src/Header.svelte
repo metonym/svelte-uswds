@@ -58,13 +58,15 @@
     if ($visible) {
       visible.set(!$visible);
     }
-  }}"></div>
+  }}"
+></div>
 
 <header
   {...$$restProps}
   class:usa-header="{true}"
   class:usa-header--basic="{basic}"
-  class:usa-header--extended="{$_extended}">
+  class:usa-header--extended="{$_extended}"
+>
   {#if $_extended}
     <slot />
   {:else}

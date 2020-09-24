@@ -74,6 +74,7 @@
     on:change
     on:change="{({ target }) => {
       checked = target.checked;
-    }}" />
+    }}"
+  />
   <label class="usa-radio__label" for="{id}">{label}</label>
 </div>
