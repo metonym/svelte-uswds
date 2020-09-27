@@ -63,7 +63,16 @@ components.forEach((component) => {
           const slot_name = slot_with_name
             ? slot_with_name.value[0].raw
             : "default";
-          api.slots[slot_name] = {};
+
+          let slot_value = [];
+
+          node.attributes.forEach((attribute) => {
+            if (attribute.name !== "name") {
+              slot_value.push(attribute.name);
+            }
+          });
+
+          api.slots[slot_name] = slot_value;
           break;
       }
     },
@@ -86,7 +95,17 @@ components.forEach((component) => {
     let slots = "";
 
     Object.keys(api.slots).forEach((key) => {
-      slots += `${key.match(/\-|\s+/g) ? `"${key}"` : key}: {};\n`;
+      let slot_value = "{}";
+
+      if (api.slots[key].length > 0) {
+        slot_value = "{";
+        api.slots[key].forEach((prop) => {
+          slot_value += `${prop}: any;`;
+        });
+        slot_value += "}";
+      }
+
+      slots += `${key.match(/\-|\s+/g) ? `"${key}"` : key}: ${slot_value};\n`;
     });
 
     types += `export class ${componentName} extends UswdsSvelteComponent {
