@@ -13,7 +13,7 @@
 </RadioButtonGroup>`;
 </script>
 
-<Layout componentName="RadioButton" code="{code}">
+<Layout componentName="RadioButton" code="{code}" hideProps>
   <RadioButtonGroup>
     <RadioButton value="stanton" label="Elizabeth Cady Stanton" />
     <RadioButton value="anthony" label="Susan B. Anthony" />
