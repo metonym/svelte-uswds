@@ -34,6 +34,7 @@ const components = [
   "TimePicker",
   "Tooltip",
   "StepIndicator",
+  "Identifier",
 ].sort();
 
 // Header -> SkipToMainContent, Menu, HeaderNav, HeaderLogo
