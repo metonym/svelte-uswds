@@ -1,4 +1,4 @@
-// Type definitions for svelte-uswds 1.0.0
+// Type definitions for svelte-uswds 1.1.0
 // Project: https://github.com/metonym/svelte-uswds
 
 export class UswdsSvelteComponent {
@@ -610,6 +610,65 @@ export class Heading extends UswdsSvelteComponent {
   $$slot_def: { default: {} };
 }
 
+export class Identifier extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {string} [description=""]
+     */
+    description?: string;
+
+    /**
+     * @type {string} [domain=""]
+     */
+    domain?: string;
+
+    /**
+     * @type {string} [disclaimer=""]
+     */
+    disclaimer?: string;
+  };
+
+  $$slot_def: {
+    logos: {};
+    domain: {};
+    disclaimer: {};
+    default: {};
+    description: {};
+  };
+}
+
+export class IdentifierLink extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {string} [href="#"]
+     */
+    href?: string;
+  };
+
+  $$slot_def: { default: {} };
+}
+
+export class IdentifierLogo extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {string} [href="#"]
+     */
+    href?: string;
+
+    /**
+     * @type {string} [src=""]
+     */
+    src?: string;
+
+    /**
+     * @type {string} [alt=""]
+     */
+    alt?: string;
+  };
+
+  $$slot_def: {};
+}
+
 export class Link extends UswdsSvelteComponent {
   $$prop_def: {
     /**
@@ -930,6 +989,58 @@ export class SkipToMainContent extends UswdsSvelteComponent {
   $$slot_def: { default: {} };
 }
 
+export class StepIndicator extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {boolean} [noLabels=false]
+     */
+    noLabels?: boolean;
+
+    /**
+     * @type {boolean} [center=false]
+     */
+    centered?: boolean;
+
+    /**
+     * @type {boolean} [counters=false]
+     */
+    counters?: boolean;
+
+    /**
+     *  @type {boolean} [smallCounters=false]
+     */
+    smallCounters?: boolean;
+  };
+
+  $$slot_def: { default: {} };
+}
+
+export class StepIndicatorSegment extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {string} [id=""]
+     */
+    id?: string;
+
+    /**
+     * @type {string} [text=""]
+     */
+    text?: string;
+
+    /**
+     * @type {boolean} [current=false]
+     */
+    current?: boolean;
+
+    /**
+     * @type {boolean} [complete=false]
+     */
+    complete?: boolean;
+  };
+
+  $$slot_def: {};
+}
+
 export class Table extends UswdsSvelteComponent {
   $$prop_def: {
     /**
@@ -1129,6 +1240,22 @@ export class TextInput extends UswdsSvelteComponent {
      * @type {boolean} [autocomplete=false]
      */
     autocomplete?: boolean;
+  };
+
+  $$slot_def: {};
+}
+
+export class TimePicker extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {string} [id=""]
+     */
+    id?: string;
+
+    /**
+     * @type {string} [label="Time picker"]
+     */
+    label?: string;
   };
 
   $$slot_def: {};
