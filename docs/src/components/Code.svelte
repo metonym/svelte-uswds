@@ -11,9 +11,7 @@
   let timeout = undefined;
 
   onDestroy(() => {
-    if (timeout !== undefined) {
-      clearTimeout(timeout);
-    }
+    if (typeof timeout === "number") clearTimeout(timeout);
   });
 
   $: if (copied) {
@@ -156,8 +154,10 @@
   </style>
 </svelte:head>
 
-<div {...$$restProps} class:code={true}>
-  <pre class="overflow-x-auto padding-2 border-2px border-gray-10 radius-sm">
+<div {...$$restProps} class:code="{true}">
+  <pre
+    class="overflow-x-auto padding-2 border-2px border-gray-10 radius-sm"
+  >
     <code class="font-mono-3xs">
       {@html highlighted}
     </code>
@@ -166,10 +166,11 @@
     <Button
       aria-label="Copy to clipboard"
       title="Copy to clipboard"
-      on:click={() => {
+      on:click="{() => {
         copy(code);
         copied = true;
-      }}>
+      }}"
+    >
       {copied ? 'Copied!' : 'Copy'}
     </Button>
   </div>

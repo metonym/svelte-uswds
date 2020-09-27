@@ -45,23 +45,29 @@
       </Link>
       .
     </p>
-    <p>
-      This library requires Svelte version 3.20 or greater.
-      <sup>1</sup>
-    </p>
+    <p>This library requires Svelte version 3.20 or greater. <sup>1</sup></p>
   </Prose>
 
-  <Heading class="font-family-heading margin-top-5" tag="h2">Quick start</Heading>
-  <Heading class="font-family-heading margin-top-5" tag="h3">Installing</Heading>
+  <Heading class="font-family-heading margin-top-5" tag="h2">
+    Quick start
+  </Heading>
+  <Heading class="font-family-heading margin-top-5" tag="h3">
+    Installing
+  </Heading>
   <Code code="yarn add -D svelte-uswds" style="max-width: 68ex;" />
-  <Heading class="font-family-heading margin-top-5" tag="h3">Adding styles</Heading>
+  <Heading class="font-family-heading margin-top-5" tag="h3">
+    Adding styles
+  </Heading>
   <p class="usa-prose">
-    In your root svelte file, link a stylesheet from a CDN using the svelte:head API.
+    In your root svelte file, link a stylesheet from a CDN using the svelte:head
+    API.
   </p>
-  <Code code={linkStylesheet} style="max-width: 68ex;" />
-  <Heading class="font-family-heading margin-top-5" tag="h3">Importing components</Heading>
+  <Code code="{linkStylesheet}" style="max-width: 68ex;" />
+  <Heading class="font-family-heading margin-top-5" tag="h3">
+    Importing components
+  </Heading>
   <p class="usa-prose">Import components from the library.</p>
-  <Code code={importComponents} style="max-width: 68ex;" />
+  <Code code="{importComponents}" style="max-width: 68ex;" />
   <p class="usa-prose">
     Explore the
     <Link rel="prefetch" href="/components/accordion/">component library</Link>
@@ -76,7 +82,8 @@
     <Link
       external
       target="_blank"
-      href="https://github.com/sveltejs/svelte/blob/master/CHANGELOG.md#3200">
+      href="https://github.com/sveltejs/svelte/blob/master/CHANGELOG.md#3200"
+    >
       Svelte v3.20.0
     </Link>
     .
