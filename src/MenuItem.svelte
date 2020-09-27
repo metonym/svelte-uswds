@@ -9,17 +9,17 @@
    */
   export let current = false;
 
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   let unsubscribe = undefined;
   let secondary = false;
 
   const ctx = getContext("Menu");
 
-  onDestroy(() => {
-    if (unsubscribe !== undefined) {
-      unsubscribe();
-    }
+  onMount(() => {
+    return () => {
+      if (unsubscribe !== undefined) unsubscribe();
+    };
   });
 
   $: if (ctx !== undefined) {

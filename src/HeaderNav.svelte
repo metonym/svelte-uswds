@@ -1,5 +1,5 @@
 <script>
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   const ctx = getContext("Header");
 
@@ -24,18 +24,12 @@
     }, value);
   }
 
-  onDestroy(() => {
-    if (timeout !== undefined) {
-      clearTimeout(timeout);
-    }
-
-    if (unsubscribe_visible !== undefined) {
-      unsubscribe_visible();
-    }
-
-    if (unsubscribe_extended !== undefined) {
-      unsubscribe_extended();
-    }
+  onMount(() => {
+    return () => {
+      if (timeout !== undefined) clearTimeout(timeout);
+      if (unsubscribe_visible !== undefined) unsubscribe_visible();
+      if (unsubscribe_extended !== undefined) unsubscribe_extended();
+    };
   });
 
   $: if (ctx !== undefined) {
