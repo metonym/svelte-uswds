@@ -26,6 +26,7 @@ import Tooltip from "./Tooltip.svelte";
 import StepIndicator from "./StepIndicator.svelte";
 import TimePicker from "./TimePicker.svelte";
 import Identifier from "./Identifier.svelte";
+import FileInput from "./FileInput.svelte";
 
 export {
   Accordion,
@@ -56,4 +57,5 @@ export {
   StepIndicator,
   TimePicker,
   Identifier,
+  FileInput,
 };
