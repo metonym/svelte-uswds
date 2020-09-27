@@ -18,7 +18,7 @@
   <title>{status}</title>
 </svelte:head>
 <Grid>
-  <HeaderTitle subtitle={error.message}>{status}</HeaderTitle>
+  <HeaderTitle subtitle="{error.message}">{status}</HeaderTitle>
   <p>
     Return to
     <Link href="/">home</Link>

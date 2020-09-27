@@ -29,14 +29,16 @@
     kind="success"
     title="Success status"
     slim="{slim}"
-    hideIcon="{hideIcon}">
+    hideIcon="{hideIcon}"
+  >
     Lorem ipsum dolor sit amet.
   </Alert>
   <Alert
     kind="warning"
     title="Warning status"
     slim="{slim}"
-    hideIcon="{hideIcon}">
+    hideIcon="{hideIcon}"
+  >
     Lorem ipsum dolor sit amet.
   </Alert>
   <Alert kind="error" title="Error status" slim="{slim}" hideIcon="{hideIcon}">

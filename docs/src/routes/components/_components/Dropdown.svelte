@@ -40,8 +40,9 @@
     <Grid row gutters>
       <Grid col auto>
         <Checkbox bind:checked="{selectJohnAdams}" value="selected">
-          Set <code class="font-mono-xs padding-05 radius-sm">selected</code> to
-          "John Adams"
+          Set
+          <code class="font-mono-xs padding-05 radius-sm">selected</code>
+          to "John Adams"
         </Checkbox>
       </Grid>
     </Grid>

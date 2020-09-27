@@ -20,7 +20,8 @@
   <Banner
     expanded="{expanded}"
     headerText="Maintenance will occur between 08:00 and 12:00 PST."
-    buttonText="More info">
+    buttonText="More info"
+  >
     Routine maintenance checks will be performed on servers in Dallas and
     Atlanta.
   </Banner>

@@ -27,7 +27,8 @@
             if (target.checked) {
               small = false;
             }
-          }}">
+          }}"
+        >
           <code class="font-mono-xs padding-05 radius-sm">big</code>
         </Checkbox>
         <Checkbox
@@ -38,7 +39,8 @@
             if (target.checked) {
               big = false;
             }
-          }}">
+          }}"
+        >
           <code class="font-mono-xs padding-05 radius-sm">small</code>
         </Checkbox>
       </Grid>

@@ -60,7 +60,8 @@
       <Grid col auto>
         <p class="margin-bottom-4">
           <code
-            class="font-mono-3xs bg-gray-10 padding-05 radius-sm">Accordion</code>
+            class="font-mono-3xs bg-gray-10 padding-05 radius-sm"
+          >Accordion</code>
         </p>
         <Checkbox bind:checked="{bordered}" value="bordered">
           <code class="font-mono-xs padding-05 radius-sm">bordered</code>
@@ -72,7 +73,8 @@
       <Grid col auto>
         <p class="margin-bottom-4">
           <code
-            class="font-mono-3xs bg-gray-10 padding-05 radius-sm">AccordionItem</code>
+            class="font-mono-3xs bg-gray-10 padding-05 radius-sm"
+          >AccordionItem</code>
         </p>
         <Checkbox bind:checked="{expanded}" value="expanded">
           <code class="font-mono-xs padding-05 radius-sm">expanded</code>

@@ -23,7 +23,8 @@
     <PasswordInput
       showPassword="{showPassword}"
       autocomplete="{autocomplete}"
-      label="Password" />
+      label="Password"
+    />
   </Fieldset>
 
   <div slot="props">

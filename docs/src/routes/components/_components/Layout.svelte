@@ -11,7 +11,8 @@
   <Link
     external
     target="_blank"
-    href="https://github.com/metonym/svelte-uswds/blob/master/src/{componentName}.svelte">
+    href="https://github.com/metonym/svelte-uswds/blob/master/src/{componentName}.svelte"
+  >
     Source code
   </Link>
 </p>
@@ -30,4 +31,4 @@
 
 <Heading class="font-family-heading margin-top-5" tag="h2">Usage</Heading>
 
-<Code {code} style="max-width: 102ex;" />
+<Code code="{code}" style="max-width: 102ex;" />

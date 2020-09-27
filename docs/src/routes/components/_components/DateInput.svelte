@@ -16,7 +16,8 @@
   <DateInput
     today="{today}"
     legend="Address date"
-    hint="For example: 04 28 1986" />
+    hint="For example: 04 28 1986"
+  />
 
   <div slot="props">
     <Grid row gutters>

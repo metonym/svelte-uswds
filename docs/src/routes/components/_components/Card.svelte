@@ -87,7 +87,8 @@
       <Card
         heading="Card with media"
         imgSrc="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-        buttonText="Visit Florida Keys">
+        buttonText="Visit Florida Keys"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
         tenetur quo cupiditate, eaque qui officia recusandae.
       </Card>
@@ -95,7 +96,8 @@
         heading="Card with media (Header first)"
         headerFirst
         imgSrc="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-        buttonText="Visit Florida Keys">
+        buttonText="Visit Florida Keys"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
         tenetur quo cupiditate, eaque qui officia recusandae.
       </Card>
@@ -104,7 +106,8 @@
         headerFirst
         insetMedia
         imgSrc="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-        buttonText="Visit Florida Keys">
+        buttonText="Visit Florida Keys"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
         tenetur quo cupiditate, eaque qui officia recusandae.
       </Card>
@@ -113,7 +116,8 @@
         headerFirst
         exdentMedia
         imgSrc="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-        buttonText="Visit Florida Keys">
+        buttonText="Visit Florida Keys"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
         tenetur quo cupiditate, eaque qui officia recusandae.
       </Card>
@@ -125,7 +129,8 @@
         heading="Flag"
         flag
         imgSrc="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-        buttonText="Visit Florida Keys">
+        buttonText="Visit Florida Keys"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
         tenetur quo cupiditate, eaque qui officia recusandae.
       </Card>
@@ -134,7 +139,8 @@
         flag
         mediaRight
         imgSrc="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-        buttonText="Visit Florida Keys">
+        buttonText="Visit Florida Keys"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
         tenetur quo cupiditate, eaque qui officia recusandae.
       </Card>

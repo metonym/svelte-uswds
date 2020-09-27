@@ -40,5 +40,5 @@
 
 <Grid>
   <HeaderTitle subtitle="Components">{post.title}</HeaderTitle>
-  <svelte:component this={registry[post.title]} />
+  <svelte:component this="{registry[post.title]}" />
 </Grid>
