@@ -24,6 +24,7 @@ import Table from "./Table.svelte";
 import RadioButton from "./RadioButton.svelte";
 import Tooltip from "./Tooltip.svelte";
 import StepIndicator from "./StepIndicator.svelte";
+import TimePicker from "./TimePicker.svelte";
 
 export {
   Accordion,
@@ -52,4 +53,5 @@ export {
   RadioButton,
   Tooltip,
   StepIndicator,
+  TimePicker,
 };

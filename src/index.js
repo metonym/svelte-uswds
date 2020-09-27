@@ -48,4 +48,5 @@ export { default as TableRow } from "./TableRow.svelte";
 export { default as Tag } from "./Tag.svelte";
 export { default as TextArea } from "./TextArea.svelte";
 export { default as TextInput } from "./TextInput.svelte";
+export { default as TimePicker } from "./TimePicker.svelte";
 export { default as Tooltip } from "./Tooltip.svelte";

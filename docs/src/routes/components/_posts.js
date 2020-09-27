@@ -31,6 +31,7 @@ const components = [
   "Tag",
   "TextArea",
   "TextInput",
+  "TimePicker",
   "Tooltip",
   "StepIndicator",
 ].sort();
