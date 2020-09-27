@@ -1,8 +1,8 @@
 <script>
   /**
-   * @type {string} [href="javascript:void(0);"]
+   * @type {string} [href="#"]
    */
-  export let href = "javascript:void(0);";
+  export let href = "#";
 
   /**
    * @type {boolean} [current=false]

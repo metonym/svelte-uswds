@@ -33,10 +33,9 @@
   on:input
 />
 <p class="usa-form__note">
-  <!-- svelte-ignore a11y-invalid-attribute -->
   <a
     class="usa-show-password"
-    href="javascript:void(0);"
+    href="#show-password"
     aria-controls="{$$props['aria-controls'] || 'password-input'}"
     title="{showPasswordText}"
     on:click|preventDefault="{() => {
