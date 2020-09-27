@@ -30,23 +30,20 @@
    */
   export let disabled = false;
 
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   const ctx = getContext("CheckboxGroup");
 
   let unsubscribe = undefined;
 
-  onDestroy(() => {
-    if (ctx !== undefined) {
-      ctx.remove({ id });
-    }
-
-    if (unsubscribe !== undefined) {
-      unsubscribe();
-    }
+  onMount(() => {
+    return () => {
+      if (ctx) ctx.remove({ id });
+      if (unsubscribe !== undefined) unsubscribe();
+    };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     ctx.add({ id, value, label, checked });
     unsubscribe = ctx.items.subscribe((value) => {
       if (value[id] !== undefined) {

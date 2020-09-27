@@ -3,15 +3,17 @@
 
   import copy from "clipboard-copy";
   import { Button } from "svelte-uswds";
-  import { onDestroy } from "svelte";
+  import { onMount } from "svelte";
   import { highlight, languages } from "prismjs";
   import "prism-svelte";
 
   let copied = false;
   let timeout = undefined;
 
-  onDestroy(() => {
-    if (typeof timeout === "number") clearTimeout(timeout);
+  onMount(() => {
+    return () => {
+      if (typeof timeout === "number") clearTimeout(timeout);
+    };
   });
 
   $: if (copied) {

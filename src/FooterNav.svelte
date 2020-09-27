@@ -1,18 +1,18 @@
 <script>
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   let big = false;
   let unsubscribe = undefined;
 
   const ctx = getContext("Footer");
 
-  onDestroy(() => {
-    if (unsubscribe !== undefined) {
-      unsubscribe();
-    }
+  onMount(() => {
+    return () => {
+      if (unsubscribe !== undefined) unsubscribe();
+    };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     unsubscribe = ctx.big.subscribe((state) => {
       big = state;
     });

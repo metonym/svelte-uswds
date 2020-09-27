@@ -74,9 +74,7 @@
         (_) => _.value === value
       )[0];
 
-      if (selected !== undefined) {
-        updateValues(selected);
-      }
+      if (selected !== undefined) updateValues(selected);
     }
 
     await tick();

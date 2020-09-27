@@ -4,7 +4,7 @@
    */
   export let tabular = false;
 
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   const ctxTableHead = getContext("TableHead");
   const ctxTableRow = getContext("TableRow");
@@ -13,17 +13,14 @@
   let firstTd = false;
   let unsubscribe = undefined;
 
-  onDestroy(() => {
-    if (ctxTableRow !== undefined) {
-      ctxTableRow.remove(id);
-    }
-
-    if (unsubscribe !== undefined) {
-      unsubscribe();
-    }
+  onMount(() => {
+    return () => {
+      if (ctxTableRow) ctxTableRow.remove(id);
+      if (unsubscribe) unsubscribe();
+    };
   });
 
-  $: if (ctxTableRow !== undefined) {
+  $: if (ctxTableRow) {
     ctxTableRow.add(id);
     unsubscribe = ctxTableRow.cells.subscribe((value) => {
       firstTd = value.indexOf(id) === 0;

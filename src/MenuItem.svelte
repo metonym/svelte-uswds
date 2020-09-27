@@ -1,42 +1,42 @@
 <script>
   /**
-   * @type {string} [href="javascript:void(0);"]
+   * @type {string} [href="#"]
    */
-  export let href = "javascript:void(0);";
+  export let href = "#";
 
   /**
    * @type {boolean} [current=false]
    */
   export let current = false;
 
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   let unsubscribe = undefined;
   let secondary = false;
 
   const ctx = getContext("Menu");
 
-  onDestroy(() => {
-    if (unsubscribe !== undefined) {
-      unsubscribe();
-    }
+  onMount(() => {
+    return () => {
+      if (unsubscribe !== undefined) unsubscribe();
+    };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     unsubscribe = ctx.secondary.subscribe((state) => {
       secondary = state;
     });
   }
 </script>
 
-{#if ctx !== undefined && secondary}
+{#if ctx && secondary}
   <a {...$$restProps} href="{href}" class:usa-nav__secondary-item="{true}">
     <slot />
   </a>
 {:else}
   <li
     {...$$restProps}
-    class:usa-nav__submenu-item="{ctx !== undefined}"
+    class:usa-nav__submenu-item="{ctx}"
     class:usa-nav__primary-item="{ctx === undefined}"
   >
     <a

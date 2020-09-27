@@ -25,9 +25,7 @@
   setContext("Header", { extended: _extended, visible, mobile });
 
   afterUpdate(() => {
-    if ($visible && !$mobile) {
-      visible.set(false);
-    }
+    if ($visible && !$mobile) visible.set(false);
 
     if (document && document.body) {
       if ($visible) {
@@ -39,9 +37,7 @@
   });
 
   $: {
-    if (extended) {
-      basic = false;
-    }
+    if (extended) basic = false;
 
     _extended.set(extended);
   }
@@ -55,9 +51,7 @@
   class="usa-overlay"
   class:is-visible="{$visible}"
   on:click="{() => {
-    if ($visible) {
-      visible.set(!$visible);
-    }
+    if ($visible) visible.set(!$visible);
   }}"
 ></div>
 

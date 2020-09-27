@@ -1,5 +1,5 @@
 <script>
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   const ctx = getContext("Header");
 
@@ -12,9 +12,7 @@
   let timeout = undefined;
 
   function debounce(cb, value = 250) {
-    if (calling) {
-      return;
-    }
+    if (calling) return;
 
     calling = true;
 
@@ -24,21 +22,15 @@
     }, value);
   }
 
-  onDestroy(() => {
-    if (timeout !== undefined) {
-      clearTimeout(timeout);
-    }
-
-    if (unsubscribe_visible !== undefined) {
-      unsubscribe_visible();
-    }
-
-    if (unsubscribe_extended !== undefined) {
-      unsubscribe_extended();
-    }
+  onMount(() => {
+    return () => {
+      if (typeof timeout === "number") clearTimeout(timeout);
+      if (unsubscribe_visible !== undefined) unsubscribe_visible();
+      if (unsubscribe_extended !== undefined) unsubscribe_extended();
+    };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     unsubscribe_visible = ctx.visible.subscribe((state) => {
       visible = state;
     });
@@ -69,7 +61,7 @@
 <svelte:window
   on:resize="{() => {
     debounce(() => {
-      if (ref && ctx !== undefined) {
+      if (ref && ctx) {
         ctx.mobile.set(ref.getBoundingClientRect().width === 0);
       }
     });
@@ -82,7 +74,7 @@
     bind:this="{ref}"
     class="usa-menu-btn"
     on:click="{() => {
-      if (ctx !== undefined) {
+      if (ctx) {
         ctx.mobile.set(true);
         ctx.visible.set(true);
       }
@@ -101,7 +93,7 @@
       <button
         class="usa-nav__close"
         on:click="{() => {
-          if (visible && ctx !== undefined) {
+          if (visible && ctx) {
             ctx.visible.set(false);
           }
         }}"
@@ -134,7 +126,7 @@
     <button
       class="usa-nav__close"
       on:click="{() => {
-        if (visible && ctx !== undefined) {
+        if (visible && ctx) {
           ctx.visible.set(false);
         }
       }}"

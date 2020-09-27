@@ -1,8 +1,8 @@
 <script>
   /**
-   * @type {string} [href="javascript:void(0);"]
+   * @type {string} [href="#"]
    */
-  export let href = "javascript:void(0);";
+  export let href = "#";
 
   /**
    * @type {boolean} [secondary=false]
@@ -13,9 +13,7 @@
 
   const ctx = getContext("FooterContent");
 
-  $: if (ctx !== undefined) {
-    secondary = true;
-  }
+  $: if (ctx) secondary = true;
 </script>
 
 {#if secondary}

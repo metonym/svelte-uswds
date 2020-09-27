@@ -485,7 +485,7 @@ export class FooterContent extends UswdsSvelteComponent {
 export class FooterLink extends UswdsSvelteComponent {
   $$prop_def: {
     /**
-     * @type {string} [href="javascript:void(0);"]
+     * @type {string} [href="#"]
      */
     href?: string;
 
@@ -629,11 +629,11 @@ export class Identifier extends UswdsSvelteComponent {
   };
 
   $$slot_def: {
-    logos: {};
+    logos: { props: any };
     domain: {};
     disclaimer: {};
     default: {};
-    description: {};
+    description: { props: any };
   };
 }
 
@@ -735,7 +735,7 @@ export class Menu extends UswdsSvelteComponent {
 export class MenuItem extends UswdsSvelteComponent {
   $$prop_def: {
     /**
-     * @type {string} [href="javascript:void(0);"]
+     * @type {string} [href="#"]
      */
     href?: string;
 
