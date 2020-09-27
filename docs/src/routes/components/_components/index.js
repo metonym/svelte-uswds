@@ -23,6 +23,7 @@ import SideNav from "./SideNav.svelte";
 import Table from "./Table.svelte";
 import RadioButton from "./RadioButton.svelte";
 import Tooltip from "./Tooltip.svelte";
+import StepIndicator from "./StepIndicator.svelte";
 
 export {
   Accordion,
@@ -50,4 +51,5 @@ export {
   Table,
   RadioButton,
   Tooltip,
+  StepIndicator,
 };

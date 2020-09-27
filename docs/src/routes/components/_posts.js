@@ -1,3 +1,4 @@
+// TODO: read from filesystem
 const components = [
   "Accordion",
   "Alert",
@@ -31,7 +32,8 @@ const components = [
   "TextArea",
   "TextInput",
   "Tooltip",
-];
+  "StepIndicator",
+].sort();
 
 // Header -> SkipToMainContent, Menu, HeaderNav, HeaderLogo
 // Footer -> FooterContent, FooterLink, FooterNav, ReturnToTop

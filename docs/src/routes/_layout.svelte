@@ -1,4 +1,6 @@
 <script>
+  export let segment = undefined;
+
   import { setContext, afterUpdate } from "svelte";
   import { writable } from "svelte/store";
   import {
@@ -11,8 +13,6 @@
     SideNavLink,
   } from "svelte-uswds";
   import { nav_components } from "./components/_posts";
-
-  export let segment = undefined;
 
   let prevPath = undefined;
   let visible = false;
@@ -56,7 +56,7 @@
 
   header {
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
@@ -148,7 +148,8 @@
 <svelte:head>
   <meta
     name="description"
-    content="Svelte component library that implements the U.S. Web Design System." />
+    content="Svelte component library that implements the U.S. Web Design System."
+  />
 </svelte:head>
 
 <svelte:window
@@ -156,7 +157,8 @@
     if (ref) {
       mobile = ref.getBoundingClientRect().width !== 0;
     }
-  }}" />
+  }}"
+/>
 
 <SkipToMainContent href="{segment}#main-content" />
 
@@ -166,7 +168,8 @@
     class:is-visible="{visible}"
     on:click="{() => {
       visible = false;
-    }}"></div>
+    }}"
+  ></div>
 {/if}
 
 <header class="bg-primary-darker">
@@ -178,7 +181,8 @@
             class="font-ui-lg text-white text-no-underline"
             href="/"
             title="Home"
-            aria-label="Home">
+            aria-label="Home"
+          >
             svelte-uswds
           </a>
         </em>
@@ -194,12 +198,14 @@
       <a
         href="https://github.com/metonym/svelte-uswds/"
         title="View on GitHub"
-        class="link-github">
+        class="link-github"
+      >
         <svg
           fill="#fff"
           role="img"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <title>GitHub icon</title>
           <path
             d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
@@ -210,7 +216,8 @@
             1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24
             2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81
             1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592
-            24 12.297c0-6.627-5.373-12-12-12"></path>
+            24 12.297c0-6.627-5.373-12-12-12"
+          ></path>
         </svg>
       </a>
     </Grid>
@@ -222,7 +229,8 @@
   class="usa-menu-btn"
   on:click="{() => {
     visible = true;
-  }}">
+  }}"
+>
   Menu
 </button>
 
@@ -238,7 +246,8 @@
           rel="prefetch"
           href="/components/{component.toLowerCase()}/"
           text="{component}"
-          current="{segment === 'components' && $slug === component.toLowerCase()}" />
+          current="{segment === 'components' && $slug === component.toLowerCase()}"
+        />
       {/each}
     </SideNavList>
   </SideNav>
@@ -253,5 +262,6 @@
     on:click="{() => {
       window.scrollTo(0, 0);
     }}"
-    href="{returnToTopHref}" />
+    href="{returnToTopHref}"
+  />
 </footer>

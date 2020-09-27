@@ -38,6 +38,8 @@ export { default as SideNav } from "./SideNav.svelte";
 export { default as SideNavLink } from "./SideNavLink.svelte";
 export { default as SideNavList } from "./SideNavList.svelte";
 export { default as SkipToMainContent } from "./SkipToMainContent.svelte";
+export { default as StepIndicator } from "./StepIndicator.svelte";
+export { default as StepIndicatorSegment } from "./StepIndicatorSegment.svelte";
 export { default as Table } from "./Table.svelte";
 export { default as TableBody } from "./TableBody.svelte";
 export { default as TableCell } from "./TableCell.svelte";

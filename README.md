@@ -67,6 +67,12 @@ In your root svelte file, link a stylesheet from a CDN using the `svelte:head` A
 
 This library includes TypeScript definitions ([types/index.d.ts](types/index.d.ts)).
 
+## Limitations
+
+This library does not support Internet Explorer.
+
+You'll need to polyfill the [Array.find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) and [Array.findIndex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex).
+
 ## [Changelog](CHANGELOG.md)
 
 ## License
