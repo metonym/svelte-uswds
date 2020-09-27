@@ -12,7 +12,7 @@
     };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     unsubscribe = ctx.big.subscribe((state) => {
       big = state;
     });

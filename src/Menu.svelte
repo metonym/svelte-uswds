@@ -37,9 +37,7 @@
 
   setContext("Menu", { secondary: _secondary });
 
-  $: {
-    _secondary.set(secondary);
-  }
+  $: _secondary.set(secondary);
 </script>
 
 <svelte:body

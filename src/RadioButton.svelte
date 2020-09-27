@@ -37,17 +37,15 @@
 
   onMount(() => {
     return () => {
-      if (ctx !== undefined) ctx.remove({ id });
+      if (ctx) ctx.remove({ id });
       if (unsubscribe !== undefined) unsubscribe();
     };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     ctx.add({ id, value, label, checked });
 
-    if (checked) {
-      ctx.toggle({ id });
-    }
+    if (checked) ctx.toggle({ id });
 
     unsubscribe = ctx.items.subscribe((value) => {
       if (value[id] !== undefined) {

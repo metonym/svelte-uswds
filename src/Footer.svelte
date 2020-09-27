@@ -23,9 +23,7 @@
   setContext("Footer", { big: _big });
 
   $: {
-    if (big || slim) {
-      medium = false;
-    }
+    if (big || slim) medium = false;
 
     _big.set(big);
   }

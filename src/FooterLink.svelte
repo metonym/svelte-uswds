@@ -13,7 +13,7 @@
 
   const ctx = getContext("FooterContent");
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     secondary = true;
   }
 </script>

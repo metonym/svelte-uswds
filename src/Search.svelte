@@ -36,9 +36,7 @@
   let prevValue = value;
 
   afterUpdate(() => {
-    if (value.length === 0 && prevValue.length > 0) {
-      dispatch("clear");
-    }
+    if (value.length === 0 && prevValue.length > 0) dispatch("clear");
 
     prevValue = value;
   });

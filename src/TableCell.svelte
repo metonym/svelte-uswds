@@ -15,12 +15,12 @@
 
   onMount(() => {
     return () => {
-      if (ctxTableRow !== undefined) ctxTableRow.remove(id);
-      if (unsubscribe !== undefined) unsubscribe();
+      if (ctxTableRow) ctxTableRow.remove(id);
+      if (unsubscribe) unsubscribe();
     };
   });
 
-  $: if (ctxTableRow !== undefined) {
+  $: if (ctxTableRow) {
     ctxTableRow.add(id);
     unsubscribe = ctxTableRow.cells.subscribe((value) => {
       firstTd = value.indexOf(id) === 0;

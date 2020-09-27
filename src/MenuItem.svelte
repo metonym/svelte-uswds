@@ -22,21 +22,21 @@
     };
   });
 
-  $: if (ctx !== undefined) {
+  $: if (ctx) {
     unsubscribe = ctx.secondary.subscribe((state) => {
       secondary = state;
     });
   }
 </script>
 
-{#if ctx !== undefined && secondary}
+{#if ctx && secondary}
   <a {...$$restProps} href="{href}" class:usa-nav__secondary-item="{true}">
     <slot />
   </a>
 {:else}
   <li
     {...$$restProps}
-    class:usa-nav__submenu-item="{ctx !== undefined}"
+    class:usa-nav__submenu-item="{ctx}"
     class:usa-nav__primary-item="{ctx === undefined}"
   >
     <a

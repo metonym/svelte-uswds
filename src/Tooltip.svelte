@@ -22,6 +22,8 @@
   let margin = { left: 0, bottom: 0, top: 0 };
 
   const INDENT = 7;
+  const hide = () => (showTooltip = false);
+  const show = () => (showTooltip = true);
 
   $: right = position === "right";
   $: left = position === "left";
@@ -44,14 +46,6 @@
       margin.bottom = vertical ? 0 : y;
     }
   });
-
-  function hide() {
-    showTooltip = false;
-  }
-
-  function show() {
-    showTooltip = true;
-  }
 </script>
 
 <span class:usa-tooltip="{true}" {...$$restProps}>
