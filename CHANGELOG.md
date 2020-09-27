@@ -16,6 +16,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - File input
 - Character count
 
+## [1.2.0](https://github.com/metonym/svelte-uswds/releases/tag/v1.2.0) - 2020-09-27
+
+**Refactoring**
+
+- replace `onDestroy` with `onMount` method
+
+**Fixes**
+
+- remove "javascript:void(0);" (invalid a11y attribute)
+- TypeScript definitions: type slot props as `any`
+
 ## [1.1.0](https://github.com/metonym/svelte-uswds/releases/tag/v1.1.0) - 2020-09-27
 
 **Features**
