@@ -20,6 +20,9 @@
       name="{id}"
       type="text"
       aria-describedby="{id}-label {id}-hint"
+      on:focus
+      on:blur
+      on:input
       {...$$restProps}
     />
   </div>

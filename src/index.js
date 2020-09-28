@@ -13,6 +13,7 @@ export { default as ChecklistItem } from "./ChecklistItem.svelte";
 export { default as DateInput } from "./DateInput.svelte";
 export { default as Dropdown } from "./Dropdown.svelte";
 export { default as Fieldset } from "./Fieldset.svelte";
+export { default as FileInput } from "./FileInput.svelte";
 export { default as Footer } from "./Footer.svelte";
 export { default as FooterContent } from "./FooterContent.svelte";
 export { default as FooterLink } from "./FooterLink.svelte";

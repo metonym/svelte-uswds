@@ -35,6 +35,7 @@ const components = [
   "Tooltip",
   "StepIndicator",
   "Identifier",
+  "FileInput",
 ].sort();
 
 // Header -> SkipToMainContent, Menu, HeaderNav, HeaderLogo
