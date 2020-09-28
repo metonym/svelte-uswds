@@ -32,9 +32,6 @@
   class:usa-button--unstyled="{unstyled}"
   disabled="{disabled}"
   on:click
-  on:mouseover
-  on:mouseenter
-  on:mouseleave
 >
   <slot />
 </button>
