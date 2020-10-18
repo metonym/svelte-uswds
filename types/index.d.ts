@@ -444,6 +444,47 @@ export class Fieldset extends UswdsSvelteComponent {
   $$slot_def: { default: {} };
 }
 
+export class FileInput extends UswdsSvelteComponent {
+  $$prop_def: {
+    /**
+     * @type {string} [id=""]
+     */
+    id?: string;
+
+    /**
+     * @type {string} [label="File input"]
+     */
+    label?: string;
+
+    /**
+     * @type {boolean} [multiple=false]
+     */
+    multiple?: boolean;
+
+    /**
+     * @type {boolean} [disabled=false]
+     */
+    disabled?: boolean;
+
+    /**
+     * @type {string} [hint=""]
+     */
+    hint?: string;
+
+    /**
+     * @type {boolean} [error=false]
+     */
+    error?: boolean;
+
+    /**
+     * @type {string} [errorText=""]
+     */
+    errorText?: string;
+  };
+
+  $$slot_def: {};
+}
+
 export class Footer extends UswdsSvelteComponent {
   $$prop_def: {
     /**
