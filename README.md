@@ -9,7 +9,7 @@
 
 ## Getting started
 
-```sh
+```bash
 yarn add -D svelte-uswds
 # OR
 npm i -D svelte-uswds
@@ -24,7 +24,8 @@ In your root svelte file, link a stylesheet from a CDN using the `svelte:head` A
 <svelte:head>
   <link
     rel="stylesheet"
-    href="https://unpkg.com/uswds@2.9.0/dist/css/uswds.min.css" />
+    href="https://unpkg.com/uswds@2.9.0/dist/css/uswds.min.css"
+  />
 </svelte:head>
 
 ```
@@ -65,7 +66,7 @@ In your root svelte file, link a stylesheet from a CDN using the `svelte:head` A
 
 ## TypeScript
 
-This library includes TypeScript definitions ([types/index.d.ts](types/index.d.ts)).
+This library includes TypeScript definitions ([types](types)).
 
 ## Limitations
 
