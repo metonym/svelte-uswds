@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - File input
 - Character count
 
+## [1.2.1](https://github.com/metonym/svelte-uswds/releases/tag/v1.2.1) - 2020-11-23
+
+**Fixes**
+
+- Separate TypeScript definitions by component
+
 ## [1.2.0](https://github.com/metonym/svelte-uswds/releases/tag/v1.2.0) - 2020-09-27
 
 **Refactoring**
